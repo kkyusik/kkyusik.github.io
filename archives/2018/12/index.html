@@ -129,6 +129,231 @@
 <section class="post-list">
 	
     <div class="post-wrapper">
+      <article class="post revealno-title">
+  <section class="meta">
+    
+    <time>
+      Dec 17, 2018
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <h1>Scraping web table by using pandas.read_html</h1>
+
+<p><strong>Kyusik Kim</strong><br><br><strong>5 June 2017</strong></p>
+<p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
+<ul>
+<li><strong>Import pandas</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>By using read.html you can scrape what you want</strong></li>
+<li><strong>In this case, website that you want to scrape must contain table data</strong></li>
+<li><strong>assign finance.naver.com to html_df</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(html_df)</span><br></pre></td></tr></table></figure>
+<pre><code>[                    0                                        1  \
+0  전일  14,850  14,850  고가  15,20015,200  (상한가  19,30019,300  )   
+1    시가  15,10015,100        저가  14,70014,700  (하한가  10,400  )   
+
+                        2  
+0   거래량  449,199  449,199  
+1  거래대금  6,737  6,737  백만  ,                    0                               1     2         3     4  \
+0                 날짜                              제목  투자의견       글쓴이    조회   
+1                NaN                             NaN   NaN       NaN   NaN   
+2   2017.11.27 10:18                 대차잔고 300만주에 육박~  의견없음  peaf****    31   
+3   2017.11.27 10:08  개미 털기인가요???아니면 계속 이런가요...  [3]  의견없음  happ****   104   
+4   2017.11.27 10:05             오늘 종가 예상 15200  [3]  의견없음  fate****   107   
+5   2017.11.27 10:02            철쭈야. 1주일 해외IR 나가지 말고  의견없음  peaf****    77   
+6   2017.11.27 09:58               바이오주와 it주는 견원지간이다  의견없음  fate****    74   
+7                NaN                             NaN   NaN       NaN   NaN   
+8   2017.11.27 09:56              지금 코쟁이들 it주들 개패듯이~  의견없음  k3k8****    93   
+9   2017.11.27 09:37              ㅋㅋ 우리 개미님들 열심히 사세요  의견없음  kimh****   152   
+10  2017.11.27 09:25          지난주 해외IR을 마쳤는데...  [2]  의견없음  peaf****   247   
+11  2017.11.27 08:47                              얘는  의견없음  mana****   331   
+12  2017.11.26 22:12                              추천  의견없음  31pu****   887   
+13               NaN                             NaN   NaN       NaN   NaN   
+14  2017.11.26 13:47                    이건 무조건 우상향이다  의견없음  yoko****  1394   
+15  2017.11.26 12:03             개 잡주 답 없는 주성..  [2]  의견없음  ssag****   837   
+16  2017.11.25 23:38              내 주식 하면서 작은바램이 있다면  의견없음  sdd9****  1134   
+17  2017.11.25 14:02                      갬들 조심  [1]  의견없음  ivor****  1238   
+18  2017.11.25 12:59  대신, 키움, 오늘 토요일에도 하나에서 ...  [3]  의견없음  bigm****  1444   
+19               NaN                             NaN   NaN       NaN   NaN   
+20  2017.11.25 10:06                         좋다  [1]  의견없음  ljc6****  1168   
+21  2017.11.24 18:42                  메르치는 쓰레기고 대신은?  의견없음  a529****  1274   
+22  2017.11.24 17:13                       부럽다.  [3]  의견없음  cind****  1626   
+23  2017.11.24 15:40                  꼴갑이 속보!!~  [2]  의견없음  k3k8****  1850   
+24  2017.11.24 16:31                       꼴갑이 속보!!~  의견없음  lds8****   794   
+25               NaN                             NaN   NaN       NaN   NaN   
+
+      5    6  
+0    공감  비공감  
+1   NaN  NaN  
+2     0    0  
+3     0    0  
+4     2    0  
+5     0    0  
+6     0    0  
+7   NaN  NaN  
+8     0    0  
+9     0    2  
+10    1    1  
+11    0    2  
+12    1    6  
+13  NaN  NaN  
+14   16    5  
+15    6    4  
+16   13    1  
+17    2    4  
+18    2    3  
+19  NaN  NaN  
+20    7    1  
+21   13    1  
+22    2    3  
+23    8    1  
+24    1    2  
+25  NaN  NaN  ,     0                                                 1   2   3   4   5   6   \
+0  NaN  페이지 네비게이션  1  2  3  4  5  6  7  8  9  10  다음  맨뒤   1   2   3   4   5   
+1  1.0                                                 2   3   4   5   6   7   
+
+   7   8   9   10  11   12   13  14  
+0   6   7   8   9  10   다음   맨뒤 NaN  
+1   8   9  10  다음  맨뒤  NaN  NaN NaN  ,    0   1   2   3   4   5   6   7   8   9   10  11
+0   1   2   3   4   5   6   7   8   9  10  다음  맨뒤,     0
+0  제목,                                                    0
+0  ※ 네티즌 투자의견은 최근3개월의 의견을 반영한 것이고 최근일 기준으로 1인 1개의...,                                                    0                  1
+0                                               시가총액          7,093  억원
+1                                             시가총액순위            코스닥 56위
+2                                              상장주식수           48249212
+3                                           액면가l매매단위        500원  l  1주
+4  주총일l전자투표  전자투표제란?  전자투표제란 주주가 온라인을 통해 의결권등을 행사...  2017.03.24  l  도입,                                                    0         1
+0                                        외국인한도주식수(A)  48249212
+1                                        외국인보유주식수(B)   4501233
+2  외국인소진율(B/A)  외국인(한도)소진율이란 외국인보유주식수를 외국인한도주식수으로...     9.33%,            0                  1
+0  투자의견l목표주가  4.11매수  l  19,444
+1   52주최고l최저   18,250  l  8,860,                                                    0                1
+0  PERlEPS(WISEfn)  PER(WISEfn) = 현재가÷EPS(WISEfn)...  21.75배  l  676원,           0       1
+0  동일업종 PER  16.92배
+1  동일업종 등락률  -3.06%,          0          1       2
+0     매도잔량  호가(20분지연)    매수잔량
+1      NaN        NaN     NaN
+2    19808      15300     NaN
+3    14885      15250     NaN
+4    25939      15200     NaN
+5    28902      15150     NaN
+6    15074      15100     NaN
+7     8674      15050     NaN
+8     9533      15000     NaN
+9     4233      14950     NaN
+10    8070      14900     NaN
+11    4256      14850     NaN
+12     NaN        NaN     NaN
+13     NaN      14800   12789
+14     NaN      14750   11614
+15     NaN      14700   21014
+16     NaN      14650    9405
+17     NaN      14600   11751
+18     NaN      14550   11127
+19     NaN      14500   20625
+20     NaN      14450    2981
+21     NaN      14400    5875
+22     NaN      14350    4870
+23     NaN        NaN     NaN
+24  139374       잔량합계  112051,          업체명        거래량         전일비
+0       삼성전자  2681000.0  하향  92,000
+1     SK하이닉스    83200.0   하향  1,900
+2        카카오   147500.0     하향  500
+3    LG디스플레이    30900.0     하향  400
+4   나라케이아이..    11250.0     상향  600
+5        NaN        NaN         NaN
+6      삼성중공업    11900.0     하향  400
+7      NAVER   791000.0  하향  19,000
+8      금호타이어     7010.0     상향  330
+9     한국항공우주    51100.0     하향  700
+10      삼성전기   104000.0   하향  3,000,            업체명       거래량        전일비
+0          신라젠  108200.0  상향  1,200
+1     스튜디오드래..   73700.0  상향  1,900
+2        녹십자랩셀   60000.0  상향  6,300
+3        CMG제약    7290.0    상향  560
+4         셀트리온  213000.0  하향  1,900
+5          NaN       NaN        NaN
+6   티슈진(Reg.S)   59300.0  하향  1,100
+7           텔콘    9150.0    상향  450
+8     셀트리온헬스..   87600.0  상향  1,500
+9         네이처셀   14450.0    상향  550
+10    SKC코오롱PI   50600.0  하향  1,000]
+</code></pre><ul>
+<li><strong>first data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>전일  14,850  14,850</td><br>      <td>고가  15,20015,200  (상한가  19,30019,300  )</td><br>      <td>거래량  449,199  449,199</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>시가  15,10015,100</td><br>      <td>저가  14,70014,700  (하한가  10,400  )</td><br>      <td>거래대금  6,737  6,737  백만</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<ul>
+<li><strong>second data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>      <th>3</th><br>      <th>4</th><br>      <th>5</th><br>      <th>6</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2017.11.27 10:18</td><br>      <td>대차잔고 300만주에 육박~</td><br>      <td>의견없음</td><br>      <td>peaf<strong><strong></strong></strong></td><br>      <td>31</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2017.11.27 10:08</td><br>      <td>개미 털기인가요???아니면 계속 이런가요…  [3]</td><br>      <td>의견없음</td><br>      <td>happ</td><br>      <td>104</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2017.11.27 10:05</td><br>      <td>오늘 종가 예상 15200  [3]</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>107</td><br>      <td>2</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2017.11.27 10:02</td><br>      <td>철쭈야. 1주일 해외IR 나가지 말고</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>77</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2017.11.27 09:58</td><br>      <td>바이오주와 it주는 견원지간이다</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>74</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>7</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2017.11.27 09:56</td><br>      <td>지금 코쟁이들 it주들 개패듯이~</td><br>      <td>의견없음</td><br>      <td>k3k8</td><br>      <td>93</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2017.11.27 09:37</td><br>      <td>ㅋㅋ 우리 개미님들 열심히 사세요</td><br>      <td>의견없음</td><br>      <td>kimh<strong><strong></strong></strong></td><br>      <td>152</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2017.11.27 09:25</td><br>      <td>지난주 해외IR을 마쳤는데…  [2]</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>247</td><br>      <td>1</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2017.11.27 08:47</td><br>      <td>얘는</td><br>      <td>의견없음</td><br>      <td>mana<strong><strong></strong></strong></td><br>      <td>331</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2017.11.26 22:12</td><br>      <td>추천</td><br>      <td>의견없음</td><br>      <td>31pu</td><br>      <td>887</td><br>      <td>1</td><br>      <td>6</td><br>    </tr><br>    <tr><br>      <th>13</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>14</th><br>      <td>2017.11.26 13:47</td><br>      <td>이건 무조건 우상향이다</td><br>      <td>의견없음</td><br>      <td>yoko<strong><strong></strong></strong></td><br>      <td>1394</td><br>      <td>16</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>15</th><br>      <td>2017.11.26 12:03</td><br>      <td>개 잡주 답 없는 주성..  [2]</td><br>      <td>의견없음</td><br>      <td>ssag</td><br>      <td>837</td><br>      <td>6</td><br>      <td>4</td><br>    </tr><br>    <tr><br>      <th>16</th><br>      <td>2017.11.25 23:38</td><br>      <td>내 주식 하면서 작은바램이 있다면</td><br>      <td>의견없음</td><br>      <td>sdd9<strong><strong></strong></strong></td><br>      <td>1134</td><br>      <td>13</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>17</th><br>      <td>2017.11.25 14:02</td><br>      <td>갬들 조심  [1]</td><br>      <td>의견없음</td><br>      <td>ivor</td><br>      <td>1238</td><br>      <td>2</td><br>      <td>4</td><br>    </tr><br>    <tr><br>      <th>18</th><br>      <td>2017.11.25 12:59</td><br>      <td>대신, 키움, 오늘 토요일에도 하나에서 …  [3]</td><br>      <td>의견없음</td><br>      <td>bigm<strong><strong></strong></strong></td><br>      <td>1444</td><br>      <td>2</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>19</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>20</th><br>      <td>2017.11.25 10:06</td><br>      <td>좋다  [1]</td><br>      <td>의견없음</td><br>      <td>ljc6</td><br>      <td>1168</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>21</th><br>      <td>2017.11.24 18:42</td><br>      <td>메르치는 쓰레기고 대신은?</td><br>      <td>의견없음</td><br>      <td>a529<strong><strong></strong></strong></td><br>      <td>1274</td><br>      <td>13</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>22</th><br>      <td>2017.11.24 17:13</td><br>      <td>부럽다.  [3]</td><br>      <td>의견없음</td><br>      <td>cind</td><br>      <td>1626</td><br>      <td>2</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>23</th><br>      <td>2017.11.24 15:40</td><br>      <td>꼴갑이 속보!!~  [2]</td><br>      <td>의견없음</td><br>      <td>k3k8<strong><strong></strong></strong></td><br>      <td>1850</td><br>      <td>8</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>24</th><br>      <td>2017.11.24 16:31</td><br>      <td>꼴갑이 속보!!~</td><br>      <td>의견없음</td><br>      <td>lds8</td><br>      <td>794</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>25</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<ul>
+<li><strong>this data frame is what you want to clean up</strong></li>
+<li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line">html_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>      <th>3</th><br>      <th>4</th><br>      <th>5</th><br>      <th>6</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2017.11.27 10:18</td><br>      <td>대차잔고 300만주에 육박~</td><br>      <td>의견없음</td><br>      <td>peaf<strong><strong></strong></strong></td><br>      <td>31</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2017.11.27 10:08</td><br>      <td>개미 털기인가요???아니면 계속 이런가요…  [3]</td><br>      <td>의견없음</td><br>      <td>happ</td><br>      <td>104</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2017.11.27 10:05</td><br>      <td>오늘 종가 예상 15200  [3]</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>107</td><br>      <td>2</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2017.11.27 10:02</td><br>      <td>철쭈야. 1주일 해외IR 나가지 말고</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>77</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2017.11.27 09:58</td><br>      <td>바이오주와 it주는 견원지간이다</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>74</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2017.11.27 09:56</td><br>      <td>지금 코쟁이들 it주들 개패듯이~</td><br>      <td>의견없음</td><br>      <td>k3k8</td><br>      <td>93</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2017.11.27 09:37</td><br>      <td>ㅋㅋ 우리 개미님들 열심히 사세요</td><br>      <td>의견없음</td><br>      <td>kimh<strong><strong></strong></strong></td><br>      <td>152</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2017.11.27 09:25</td><br>      <td>지난주 해외IR을 마쳤는데…  [2]</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>247</td><br>      <td>1</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2017.11.27 08:47</td><br>      <td>얘는</td><br>      <td>의견없음</td><br>      <td>mana<em>**</em></td><br>      <td>331</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<ul>
+<li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
+<li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line">html_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2017.11.27 10:18</td><br>      <td>대차잔고 300만주에 육박~</td><br>      <td>의견없음</td><br>      <td>peaf<strong><strong></strong></strong></td><br>      <td>31</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2017.11.27 10:08</td><br>      <td>개미 털기인가요???아니면 계속 이런가요…  [3]</td><br>      <td>의견없음</td><br>      <td>happ</td><br>      <td>104</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2017.11.27 10:05</td><br>      <td>오늘 종가 예상 15200  [3]</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>107</td><br>      <td>2</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2017.11.27 10:02</td><br>      <td>철쭈야. 1주일 해외IR 나가지 말고</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>77</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2017.11.27 09:58</td><br>      <td>바이오주와 it주는 견원지간이다</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>74</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2017.11.27 09:56</td><br>      <td>지금 코쟁이들 it주들 개패듯이~</td><br>      <td>의견없음</td><br>      <td>k3k8</td><br>      <td>93</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2017.11.27 09:37</td><br>      <td>ㅋㅋ 우리 개미님들 열심히 사세요</td><br>      <td>의견없음</td><br>      <td>kimh<strong><strong></strong></strong></td><br>      <td>152</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2017.11.27 09:25</td><br>      <td>지난주 해외IR을 마쳤는데…  [2]</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>247</td><br>      <td>1</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2017.11.27 08:47</td><br>      <td>얘는</td><br>      <td>의견없음</td><br>      <td>mana<em>**</em></td><br>      <td>331</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<ul>
+<li><strong>remove first row by using [drop index or [1:]] </strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df.drop(html_df.index[<span class="number">0</span>]).head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>2</th><br>      <td>2017.11.27 10:18</td><br>      <td>대차잔고 300만주에 육박~</td><br>      <td>의견없음</td><br>      <td>peaf<strong><strong></strong></strong></td><br>      <td>31</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2017.11.27 10:08</td><br>      <td>개미 털기인가요???아니면 계속 이런가요…  [3]</td><br>      <td>의견없음</td><br>      <td>happ</td><br>      <td>104</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2017.11.27 10:05</td><br>      <td>오늘 종가 예상 15200  [3]</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>107</td><br>      <td>2</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2017.11.27 10:02</td><br>      <td>철쭈야. 1주일 해외IR 나가지 말고</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>77</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2017.11.27 09:58</td><br>      <td>바이오주와 it주는 견원지간이다</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>74</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2017.11.27 09:56</td><br>      <td>지금 코쟁이들 it주들 개패듯이~</td><br>      <td>의견없음</td><br>      <td>k3k8</td><br>      <td>93</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2017.11.27 09:37</td><br>      <td>ㅋㅋ 우리 개미님들 열심히 사세요</td><br>      <td>의견없음</td><br>      <td>kimh<strong><strong></strong></strong></td><br>      <td>152</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2017.11.27 09:25</td><br>      <td>지난주 해외IR을 마쳤는데…  [2]</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>247</td><br>      <td>1</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2017.11.27 08:47</td><br>      <td>얘는</td><br>      <td>의견없음</td><br>      <td>mana<strong><strong></strong></strong></td><br>      <td>331</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2017.11.26 22:12</td><br>      <td>추천</td><br>      <td>의견없음</td><br>      <td>31pu</td><br>      <td>887</td><br>      <td>1</td><br>      <td>6</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">1</span>:].head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>2</th><br>      <td>2017.11.27 10:18</td><br>      <td>대차잔고 300만주에 육박~</td><br>      <td>의견없음</td><br>      <td>peaf<strong><strong></strong></strong></td><br>      <td>31</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2017.11.27 10:08</td><br>      <td>개미 털기인가요???아니면 계속 이런가요…  [3]</td><br>      <td>의견없음</td><br>      <td>happ</td><br>      <td>104</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2017.11.27 10:05</td><br>      <td>오늘 종가 예상 15200  [3]</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>107</td><br>      <td>2</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2017.11.27 10:02</td><br>      <td>철쭈야. 1주일 해외IR 나가지 말고</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>77</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2017.11.27 09:58</td><br>      <td>바이오주와 it주는 견원지간이다</td><br>      <td>의견없음</td><br>      <td>fate<strong><strong></strong></strong></td><br>      <td>74</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2017.11.27 09:56</td><br>      <td>지금 코쟁이들 it주들 개패듯이~</td><br>      <td>의견없음</td><br>      <td>k3k8</td><br>      <td>93</td><br>      <td>0</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2017.11.27 09:37</td><br>      <td>ㅋㅋ 우리 개미님들 열심히 사세요</td><br>      <td>의견없음</td><br>      <td>kimh<strong><strong></strong></strong></td><br>      <td>152</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2017.11.27 09:25</td><br>      <td>지난주 해외IR을 마쳤는데…  [2]</td><br>      <td>의견없음</td><br>      <td>peaf</td><br>      <td>247</td><br>      <td>1</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2017.11.27 08:47</td><br>      <td>얘는</td><br>      <td>의견없음</td><br>      <td>mana<strong><strong></strong></strong></td><br>      <td>331</td><br>      <td>0</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2017.11.26 22:12</td><br>      <td>추천</td><br>      <td>의견없음</td><br>      <td>31pu</td><br>      <td>887</td><br>      <td>1</td><br>      <td>6</td><br>    </tr><br>  </tbody><br></table><br></div>
+
+
+
+<ul>
+<li><strong>It is very short code ! </strong></li>
+</ul>
+<style>
+#__dic_layer__ img{ width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none; display: inline; opacity:1;}#__dic_menulayer__ img{ width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none; display: inline; opacity:1;}#__dic_waitlayer__ img{ width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none; display: inline; opacity:1;}#__dic_layer__ a{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none;display: inline; background-color:transparent}#__dic_layer__ a:link{ color:#0860A8; }#__dic_layer__ a:visited{ color:#0860A8; }#__dic_layer__ a:active{ color:#0860A8;}#__dic_layer__ a:hover{ color:#0860A8; text-decoration:underline; }#__dic_layer__ div{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none;width:auto;height:auto; }#__dic_menulayer__ a{ display: inline; background-color:transparent}#__dic_layer__ tr{ width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none;font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__dic_layer__ td{ width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none;font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__table_source_open__ { width:auto;height:auto;margin:0px;padding:0px;background-color:transparent;border-color:transparent;border-width:0px;text-shadow:none; }#__dic_source_data__ div{ width:99%; }#__dic_layer__ p{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__dic_layer__ b{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__dic_layer__ ul{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none;width:auto;height:auto; padding:0px 0px 0px 4px; margin:0px; list-style-type: disc;}#__dic_layer__ li{ font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none;width:auto;height:auto; padding:0px 0px 0xp 8px; margin:0px; list-style-type: decimal; list-style-position: outside;}#__dic_layer__ span{font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__dic_layer__ option{font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none; }#__dic_layer__ select{font-size:10pt;color:black; font-family:Arial, Helvetica, sans-serif; text-align: left; letter-spacing:normal;line-height:normal;font-weight: normal;text-shadow:none;background-color:white;width:145px;height: 20px;display:inline-block;border:1px solid transparent;padding: 0px;margin:2px 0px 2px 0px;}
+</style>
+
+<p><i>Written by Jupyter Notebook Python3</i></p>
+
+<p><br></p>
+<p><a href="#top">Back to top</a></p><br><p><a href="https://iamkyusik.github.io/" target="_blank" rel="noopener">Back to home</a></p><br><p><a href="https://iamkyusik.github.io/projects/" target="_blank" rel="noopener">Back to projects</a></p>
+
+<p><!-- <a href="https://iamkyusik.github.io/portfolio/" class="next round"><img src="figure/arrow-left.png" width="80" height="80" align="left"/></a> --><a href="https://iamkyusik.github.io/projects/" class="next round" target="_blank" rel="noopener"><img src="images/arrow-right.png" width="50" height="50" align="right"></a></p>
+
+
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class="post-wrapper">
       <article class="post reveal">
   <section class="meta">
     
