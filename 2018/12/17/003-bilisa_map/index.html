@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Everything is fine">
-    <title>Scraping web table by using pandas.read_html - Everything is fine</title>
+    <title>Mapping Spatial Mismatch between Opportunity and Population - Everything is fine</title>
     <meta name="author" content="Q">
     
         <meta name="keywords" content="geography,transportation,spatial analysis,">
@@ -15,19 +15,21 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"\n5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T14:11:44-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"Introduction of scraping web table using pandas.read_html","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/","keywords":"data analysis, python, crawling"}</script>
-    <meta name="description" content="Introduction of scraping web table using pandas.read_html">
-<meta name="keywords" content="data analysis,python,crawling">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"Techniques used: Bivariate LISA (Local Indicators of Spatial Association)Tools: ArcGIS 10.2, GeoDA\n\nTo examine spatial mismatch between childcare opportunity and children population, bivariate LISA was used. The map was visualized by using ArcGIS and estimated by using GeoDa. \nThe map suggests that darker purple grids mean that they have low in opportunity and high in children population. Therefore, the darker purple grids show that they are the grids which need more childcare opportunities. \n\nReferenceKyusik Kim, 2015, A Study on an Assessment of Spatial Equity about Opportunities to use Public Childcare Services: Focused on National/Public Childcare Facilities in Seoul, A Thesis of Master degree, Seoul National University. \n","dateCreated":"2018-12-17T14:54:49-05:00","dateModified":"2018-12-17T14:54:49-05:00","datePublished":"2018-12-17T14:54:49-05:00","description":"","headline":"Mapping Spatial Mismatch between Opportunity and Population","image":["https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/003-bilisa_map/"},"publisher":{"@type":"Organization","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/003-bilisa_map/","keywords":"데이터분석, data analysis, portfolio, mapping","thumbnailUrl":"https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png"}</script>
+    <meta name="description" content="Techniques used: Bivariate LISA (Local Indicators of Spatial Association)Tools: ArcGIS 10.2, GeoDA  To examine spatial mismatch between childcare opportunity and children population, bivariate LISA wa">
+<meta name="keywords" content="데이터분석,data analysis,portfolio,mapping">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Scraping web table by using pandas.read_html">
-<meta property="og:url" content="https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/index.html">
+<meta property="og:title" content="Mapping Spatial Mismatch between Opportunity and Population">
+<meta property="og:url" content="https://kkyusik.github.io/2018/12/17/003-bilisa_map/index.html">
 <meta property="og:site_name" content="Everything is fine">
-<meta property="og:description" content="Introduction of scraping web table using pandas.read_html">
+<meta property="og:description" content="Techniques used: Bivariate LISA (Local Indicators of Spatial Association)Tools: ArcGIS 10.2, GeoDA  To examine spatial mismatch between childcare opportunity and children population, bivariate LISA wa">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-17T19:11:44.991Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png">
+<meta property="og:updated_time" content="2018-12-17T19:54:49.729Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scraping web table by using pandas.read_html">
-<meta name="twitter:description" content="Introduction of scraping web table using pandas.read_html">
+<meta name="twitter:title" content="Mapping Spatial Mismatch between Opportunity and Population">
+<meta name="twitter:description" content="Techniques used: Bivariate LISA (Local Indicators of Spatial Association)Tools: ArcGIS 10.2, GeoDA  To examine spatial mismatch between childcare opportunity and children population, bivariate LISA wa">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png">
     
     
         
@@ -35,6 +37,9 @@
     
         <meta property="og:image" content="https://kkyusik.github.io/assets/images/Bacnground_Seaside.jpg"/>
     
+    
+        <meta property="og:image" content="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png" />
     
     
     
@@ -185,12 +190,12 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            Scraping web table by using pandas.read_html
+            Mapping Spatial Mismatch between Opportunity and Population
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2018-12-17T10:38:38-05:00">
+    <time datetime="2018-12-17T14:54:49-05:00">
 	
 		    Dec 17, 2018
     	
@@ -210,46 +215,13 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <!-- excerpt -->
-<p><strong>5 June 2017</strong></p>
-<p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
-<ul>
-<li><strong>Import pandas</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>By using read.html you can scrape what you want</strong></li>
-<li><strong>In this case, website that you want to scrape must contain table data</strong></li>
-<li><strong>assign finance.naver.com to html_df</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>first data frame is</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>second data frame is</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>this data frame is what you want to clean up</strong></li>
-<li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
-<li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>remove first row by using [drop index or [1:]] </strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>It is very short code ! </strong></li>
-</ul>
+            <p>Techniques used: Bivariate LISA (Local Indicators of Spatial Association)<br>Tools: ArcGIS 10.2, GeoDA</p>
+<p><img src="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png" alt="image4493"></p>
+<p>To examine spatial mismatch between childcare opportunity and children population, bivariate LISA was used. The map was visualized by using ArcGIS and estimated by using GeoDa. </p>
+<p>The map suggests that darker purple grids mean that they have low in opportunity and high in children population. Therefore, the darker purple grids show that they are the grids which need more childcare opportunities. </p>
+<hr>
+<p>Reference<br>Kyusik Kim, 2015, A Study on an Assessment of Spatial Equity about Opportunities to use Public Childcare Services: Focused on National/Public Childcare Facilities in Seoul, A Thesis of Master degree, Seoul National University. </p>
+
             
 
         </div>
@@ -259,7 +231,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/crawling/">crawling</a> <a class="tag tag--primary tag--small t-link" href="/tags/data-analysis/">data analysis</a> <a class="tag tag--primary tag--small t-link" href="/tags/python/">python</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/data-analysis/">data analysis</a> <a class="tag tag--primary tag--small t-link" href="/tags/mapping/">mapping</a> <a class="tag tag--primary tag--small t-link" href="/tags/portfolio/">portfolio</a> <a class="tag tag--primary tag--small t-link" href="/tags/데이터분석/">데이터분석</a>
 
             </div>
         
@@ -269,8 +241,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/004-dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="PREVIOUS: Dasymetric Map for Estimating Spatial Distribution of Children">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -279,7 +250,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/000-data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/004-dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="NEXT: Dasymetric Map for Estimating Spatial Distribution of Children">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -297,7 +268,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -305,7 +276,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -313,7 +284,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -365,8 +336,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/004-dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="PREVIOUS: Dasymetric Map for Estimating Spatial Distribution of Children">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -375,7 +345,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/000-data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/004-dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="NEXT: Dasymetric Map for Estimating Spatial Distribution of Children">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -393,7 +363,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -401,7 +371,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -409,7 +379,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003-bilisa_map/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -443,7 +413,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003-bilisa_map/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -451,7 +421,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003-bilisa_map/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -459,7 +429,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003-bilisa_map/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -518,9 +488,9 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/';
+                 this.page.url = 'https://kkyusik.github.io/2018/12/17/003-bilisa_map/';
                  
-                    this.page.identifier = '2018/12/17/001-20170605_pandas_read.html/';
+                    this.page.identifier = '2018/12/17/003-bilisa_map/';
                  
              };
             (function() {
