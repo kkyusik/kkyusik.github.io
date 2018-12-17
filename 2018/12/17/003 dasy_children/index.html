@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Everything is fine">
-    <title>Scraping web table by using pandas.read_html - Everything is fine</title>
+    <title>Dasymetric Map for Estimating Spatial Distribution of Children - Everything is fine</title>
     <meta name="author" content="Q">
     
         <meta name="keywords" content="geography,transportation,spatial analysis,">
@@ -15,19 +15,21 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"\n5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T14:11:44-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"Introduction of scraping web table using pandas.read_html","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/","keywords":"python, crawling, data analysis"}</script>
-    <meta name="description" content="Introduction of scraping web table using pandas.read_html">
-<meta name="keywords" content="python,crawling,data analysis">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"\nTechniques used: Dasymetric mapping, GWRTools: ArcGIS 1.2, R\n\nTo estimate and visualize a distribution of infants in 2009, Seoul, Korea, this dasymetric map was made by using GWR (Geographically Weighted Regression) and spatial interpolation techniques. \nThe results in the map I indicate that there are more infants from pale yellow to dark red in a grid of 200m x 200m. The map becomes fundamental information to calculate equity measure by comparison with the calculated index of accessibility. \n\nReferenceKim, Kyusik, 2016, A Study on Spatial Equity of Opportunities to Use Public Childcare Services Focusing on National/Public Childcare Centers in Seoul, Seoul studies 17(1): 45-64.","dateCreated":"2018-12-17T14:25:44-05:00","dateModified":"2018-12-17T14:25:32-05:00","datePublished":"2018-12-17T14:25:44-05:00","description":"This post shows a map that I made when I was in graduate school.","headline":"Dasymetric Map for Estimating Spatial Distribution of Children","image":["이미지.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/003 dasy_children/"},"publisher":{"@type":"Organization","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/003 dasy_children/","keywords":"data analysis, 데이터분석","thumbnailUrl":"이미지.jpg"}</script>
+    <meta name="description" content="This post shows a map that I made when I was in graduate school.">
+<meta name="keywords" content="data analysis,데이터분석">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Scraping web table by using pandas.read_html">
-<meta property="og:url" content="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/index.html">
+<meta property="og:title" content="Dasymetric Map for Estimating Spatial Distribution of Children">
+<meta property="og:url" content="https://kkyusik.github.io/2018/12/17/003 dasy_children/index.html">
 <meta property="og:site_name" content="Everything is fine">
-<meta property="og:description" content="Introduction of scraping web table using pandas.read_html">
+<meta property="og:description" content="This post shows a map that I made when I was in graduate school.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-17T19:11:44.991Z">
+<meta property="og:image" content="https://kkyusik.github.io/2018/12/17/003%20dasy_children/dasy_image/children_pop_2009.png">
+<meta property="og:updated_time" content="2018-12-17T19:25:32.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scraping web table by using pandas.read_html">
-<meta name="twitter:description" content="Introduction of scraping web table using pandas.read_html">
+<meta name="twitter:title" content="Dasymetric Map for Estimating Spatial Distribution of Children">
+<meta name="twitter:description" content="This post shows a map that I made when I was in graduate school.">
+<meta name="twitter:image" content="https://kkyusik.github.io/2018/12/17/003%20dasy_children/dasy_image/children_pop_2009.png">
     
     
         
@@ -35,6 +37,9 @@
     
         <meta property="og:image" content="https://kkyusik.github.io/assets/images/Bacnground_Seaside.jpg"/>
     
+    
+        <meta property="og:image" content="https://kkyusik.github.io/2018/12/17/003 dasy_children/이미지.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="https://kkyusik.github.io/2018/12/17/003 dasy_children/이미지.jpg" />
     
     
     
@@ -185,12 +190,12 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            Scraping web table by using pandas.read_html
+            Dasymetric Map for Estimating Spatial Distribution of Children
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2018-12-17T10:38:38-05:00">
+    <time datetime="2018-12-17T14:25:44-05:00">
 	
 		    Dec 17, 2018
     	
@@ -211,45 +216,12 @@
     <div class="post-content markdown">
         <div class="main-content-wrap">
             <!-- excerpt -->
-<p><strong>5 June 2017</strong></p>
-<p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
-<ul>
-<li><strong>Import pandas</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>By using read.html you can scrape what you want</strong></li>
-<li><strong>In this case, website that you want to scrape must contain table data</strong></li>
-<li><strong>assign finance.naver.com to html_df</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>first data frame is</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>second data frame is</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>this data frame is what you want to clean up</strong></li>
-<li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
-<li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>remove first row by using [drop index or [1:]] </strong></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>It is very short code ! </strong></li>
-</ul>
+<p>Techniques used: Dasymetric mapping, GWR<br>Tools: ArcGIS 1.2, R</p>
+<p><img src="dasy_image\children_pop_2009.png" alt="alt text" title="Map 1"></p>
+<p>To estimate and visualize a distribution of infants in 2009, Seoul, Korea, this dasymetric map was made by using GWR (Geographically Weighted Regression) and spatial interpolation techniques. </p>
+<p>The results in the map I indicate that there are more infants from pale yellow to dark red in a grid of 200m x 200m. The map becomes fundamental information to calculate equity measure by comparison with the calculated index of accessibility. </p>
+<hr>
+<p>Reference<br>Kim, Kyusik, 2016, A Study on Spatial Equity of Opportunities to Use Public Childcare Services Focusing on National/Public Childcare Centers in Seoul, Seoul studies 17(1): 45-64.</p>
             
 
         </div>
@@ -259,7 +231,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/crawling/">crawling</a> <a class="tag tag--primary tag--small t-link" href="/tags/data-analysis/">data analysis</a> <a class="tag tag--primary tag--small t-link" href="/tags/python/">python</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/data-analysis/">data analysis</a> <a class="tag tag--primary tag--small t-link" href="/tags/데이터분석/">데이터분석</a>
 
             </div>
         
@@ -270,7 +242,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="PREVIOUS: Dasymetric Map for Estimating Spatial Distribution of Children">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/dd/" data-tooltip="dd" aria-label="PREVIOUS: dd">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -279,7 +251,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/001 20170605_pandas_read.html/" data-tooltip="Scraping web table by using pandas.read_html" aria-label="NEXT: Scraping web table by using pandas.read_html">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -297,7 +269,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -305,7 +277,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -313,7 +285,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -366,7 +338,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/dasy_children/" data-tooltip="Dasymetric Map for Estimating Spatial Distribution of Children" aria-label="PREVIOUS: Dasymetric Map for Estimating Spatial Distribution of Children">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/dd/" data-tooltip="dd" aria-label="PREVIOUS: dd">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -375,7 +347,7 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/001 20170605_pandas_read.html/" data-tooltip="Scraping web table by using pandas.read_html" aria-label="NEXT: Scraping web table by using pandas.read_html">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -393,7 +365,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -401,7 +373,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -409,7 +381,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003 dasy_children/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -443,7 +415,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/003 dasy_children/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -451,7 +423,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/003 dasy_children/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -459,7 +431,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/003 dasy_children/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -518,9 +490,9 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/';
+                 this.page.url = 'https://kkyusik.github.io/2018/12/17/003 dasy_children/';
                  
-                    this.page.identifier = '2018/12/17/20170605_pandas_read.html/';
+                    this.page.identifier = '2018/12/17/003 dasy_children/';
                  
              };
             (function() {
