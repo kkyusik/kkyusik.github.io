@@ -13,14 +13,14 @@
   <link rel="alternate" href="/atom.xml" title="Blog TEST">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
-<meta name="keywords" content="python">
+<meta name="keywords" content="python; crawling;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scraping web table by using pandas.read_html">
 <meta property="og:url" content="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/index.html">
 <meta property="og:site_name" content="Blog TEST">
 <meta property="og:description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-17T15:50:54.940Z">
+<meta property="og:updated_time" content="2018-12-17T15:58:20.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scraping web table by using pandas.read_html">
 <meta name="twitter:description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
@@ -158,185 +158,30 @@
 <li><strong>assign finance.naver.com to html_df</strong></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(html_df)</span><br></pre></td></tr></table></figure>
-<pre><code>[                  0                                    1                    2
-0  전일  6,430  6,430  고가  6,4806,480  (상한가  8,3508,350  )  거래량  98,677  98,677
-1    시가  6,3806,380       저가  6,3606,360  (하한가  4,510  )   거래대금  634  634  백만,                    0                               1     2         3     4  \
-0                 날짜                              제목  투자의견       글쓴이    조회   
-1                NaN                             NaN   NaN       NaN   NaN   
-2   2018.12.17 20:10                      상호변경.똥주.주성  의견없음  jgh9****   129   
-3   2018.12.17 22:01                      상호변경.똥주.주성  의견없음  jgh9****    56   
-4   2018.12.17 10:14                 어떻해야하나요ㅜ.ㅜ  [2]  의견없음  tera****   583   
-5   2018.12.14 19:02            담주는 완전 지하로 직행!!  [1]  의견없음  thch****  1014   
-6   2018.12.14 15:09        화난 투자자들(다음 대상은 황철주)  [7]  의견없음  ssti****   951   
-7                NaN                             NaN   NaN       NaN   NaN   
-8   2018.12.14 12:01           오천원 아래서 기다리고 있네요  [3]  의견없음  jop1****   625   
-9   2018.12.14 11:56                   진짜 욕나온다~  [1]  의견없음  9090****   544   
-10  2018.12.14 10:38                   시총 3천억이면  [4]  의견없음  ljw1****   869   
-11  2018.12.14 10:19                             놀이터  의견없음  lds8****   440   
-12  2018.12.13 21:57                 뭐하는 회사인가 ?  [1]  의견없음  vvip****   671   
-13               NaN                             NaN   NaN       NaN   NaN   
-14  2018.12.13 14:47                내평단 1만원인데..  [2]  의견없음  amin****  1085   
-15  2018.12.12 10:39                        주성이  [1]  의견없음  kss3****  1466   
-16  2018.12.12 06:01  황철주 대표!(본연의 업무에 충실하고, ...  [5]  의견없음  ssti****  1298   
-17  2018.12.11 18:39                     주주분들 사리생기것다  의견없음  isla****   717   
-18  2018.12.11 17:43                 아예 관심이 없구나  [1]  의견없음  qwer****   580   
-19               NaN                             NaN   NaN       NaN   NaN   
-20  2018.12.11 15:16                              장난  의견없음  lds8****   580   
-21  2018.12.11 17:09                              장난  의견없음  jgh9****   306   
-22  2018.12.11 09:13                              그냥  의견없음  lds8****   555   
-23  2018.12.11 08:16                      황가야~~  [2]  의견없음  mell****   594   
-24  2018.12.10 20:00                        16개월 남았다    중립  stoc****  1061   
-25               NaN                             NaN   NaN       NaN   NaN   
-
-      5    6  
-0    공감  비공감  
-1   NaN  NaN  
-2     5    0  
-3     2    1  
-4     1    2  
-5     3    5  
-6    22    3  
-7   NaN  NaN  
-8     2   12  
-9     6    3  
-10    2    9  
-11    7    1  
-12   14    2  
-13  NaN  NaN  
-14    4    3  
-15    3    3  
-16   31    3  
-17    7    1  
-18    3    3  
-19  NaN  NaN  
-20    5    2  
-21    6    1  
-22    5    0  
-23   11    2  
-24    3    2  
-25  NaN  NaN  ,     0                                                 1   2   3   4   5   6   \
-0  NaN  페이지 네비게이션  1  2  3  4  5  6  7  8  9  10  다음  맨뒤   1   2   3   4   5   
-1  1.0                                                 2   3   4   5   6   7   
-2  1.0                                                 2   3   4   5   6   7   
-
-   7   8   9   10  11   12   13  14  
-0   6   7   8   9  10   다음   맨뒤 NaN  
-1   8   9  10  다음  맨뒤  NaN  NaN NaN  
-2   8   9  10  다음  맨뒤  NaN  NaN NaN  ,    0   1   2   3   4   5   6   7   8   9   10  11
-0   1   2   3   4   5   6   7   8   9  10  다음  맨뒤,     0
-0  제목,                                                    0
-0  ※ 네티즌 투자의견은 최근3개월의 의견을 반영한 것이고 최근일 기준으로 1인 1개의...,           0                  1
-0      시가총액          3,107  억원
-1    시가총액순위           코스닥 130위
-2     상장주식수           48249212
-3  액면가l매매단위        500원  l  1주
-4  주총일l전자투표  2018.03.22  l  도입,              0         1
-0  외국인한도주식수(A)  48249212
-1  외국인보유주식수(B)   4643360
-2  외국인소진율(B/A)     9.62%,            0                  1
-0  투자의견l목표주가  4.00매수  l  10,000
-1   52주최고l최저   14,100  l  6,340,                   0               1
-0  PERlEPS(FnGuide)  7.39배  l  871원,           0       1
-0  동일업종 PER   5.48배
-1  동일업종 등락률  +0.47%,        0          1      2
-0   매도잔량  호가(20분지연)   매수잔량
-1    NaN        NaN    NaN
-2    665       6530    NaN
-3    594       6520    NaN
-4    271       6510    NaN
-5    780       6500    NaN
-6    576       6490    NaN
-7   1951       6480    NaN
-8    557       6470    NaN
-9   1502       6460    NaN
-10   537       6450    NaN
-11   599       6440    NaN
-12   NaN        NaN    NaN
-13   NaN       6430   1721
-14   NaN       6420    447
-15   NaN       6410   1700
-16   NaN       6400   1229
-17   NaN       6390   3302
-18   NaN       6380   3826
-19   NaN       6370   1512
-20   NaN       6360   1598
-21   NaN       6350   3639
-22   NaN       6340   1018
-23   NaN        NaN    NaN
-24  8032       잔량합계  19992,          업체명     거래량         전일비
-0        업체명     거래량         전일비
-1      NAVER  122000   하향  1,500
-2       셀트리온  214500   상향  6,500
-3       삼성전자   39150     상향  200
-4   삼성바이오로..  372500  하향  19,000
-5      웰바이오텍    4365  상한가  1,005
-6        NaN     NaN         NaN
-7     SK하이닉스   62200     상향  400
-8       동성제약   19200     하향  800
-9     현대엘리베이   92100   하향  4,900
-10      보해양조    2310     상향  290
-11      LG전자   69100   상향  1,400,          업체명    거래량         전일비
-0        업체명    거래량         전일비
-1        아난티  19800   상향  4,450
-2   셀트리온헬스..  71200   상향  1,200
-3         흥국   7000  상한가  1,610
-4        신라젠  75200   하향  3,800
-5      대아티아이   8160     하향  420
-6        NaN    NaN         NaN
-7     연이정보통신   2705     상향  480
-8       경남제약  17200          보합
-9       풍국주정  15650   상향  1,900
-10    코오롱티슈진  38550   상향  1,200
-11  강스템바이오..  19150   상향  2,400]
-</code></pre><ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><strong>first data frame is</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>전일  6,430  6,430</td><br>      <td>고가  6,4806,480  (상한가  8,3508,350  )</td><br>      <td>거래량  98,677  98,677</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>시가  6,3806,380</td><br>      <td>저가  6,3606,360  (하한가  4,510  )</td><br>      <td>거래대금  634  634  백만</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>second data frame is</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>      <th>3</th><br>      <th>4</th><br>      <th>5</th><br>      <th>6</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2018.12.17 20:10</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>129</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2018.12.17 22:01</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9</td><br>      <td>56</td><br>      <td>2</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2018.12.17 10:14</td><br>      <td>어떻해야하나요ㅜ.ㅜ  [2]</td><br>      <td>의견없음</td><br>      <td>tera<strong><strong></strong></strong></td><br>      <td>583</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2018.12.14 19:02</td><br>      <td>담주는 완전 지하로 직행!!  [1]</td><br>      <td>의견없음</td><br>      <td>thch</td><br>      <td>1014</td><br>      <td>3</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2018.12.14 15:09</td><br>      <td>화난 투자자들(다음 대상은 황철주)  [7]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>951</td><br>      <td>22</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>7</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2018.12.14 12:01</td><br>      <td>오천원 아래서 기다리고 있네요  [3]</td><br>      <td>의견없음</td><br>      <td>jop1</td><br>      <td>625</td><br>      <td>2</td><br>      <td>12</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2018.12.14 11:56</td><br>      <td>진짜 욕나온다~  [1]</td><br>      <td>의견없음</td><br>      <td>9090<strong><strong></strong></strong></td><br>      <td>544</td><br>      <td>6</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2018.12.14 10:38</td><br>      <td>시총 3천억이면  [4]</td><br>      <td>의견없음</td><br>      <td>ljw1</td><br>      <td>869</td><br>      <td>2</td><br>      <td>9</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2018.12.14 10:19</td><br>      <td>놀이터</td><br>      <td>의견없음</td><br>      <td>lds8<strong><strong></strong></strong></td><br>      <td>440</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2018.12.13 21:57</td><br>      <td>뭐하는 회사인가 ?  [1]</td><br>      <td>의견없음</td><br>      <td>vvip</td><br>      <td>671</td><br>      <td>14</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>13</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>14</th><br>      <td>2018.12.13 14:47</td><br>      <td>내평단 1만원인데..  [2]</td><br>      <td>의견없음</td><br>      <td>amin<strong><strong></strong></strong></td><br>      <td>1085</td><br>      <td>4</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>15</th><br>      <td>2018.12.12 10:39</td><br>      <td>주성이  [1]</td><br>      <td>의견없음</td><br>      <td>kss3</td><br>      <td>1466</td><br>      <td>3</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>16</th><br>      <td>2018.12.12 06:01</td><br>      <td>황철주 대표!(본연의 업무에 충실하고, …  [5]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>1298</td><br>      <td>31</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>17</th><br>      <td>2018.12.11 18:39</td><br>      <td>주주분들 사리생기것다</td><br>      <td>의견없음</td><br>      <td>isla</td><br>      <td>717</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>18</th><br>      <td>2018.12.11 17:43</td><br>      <td>아예 관심이 없구나  [1]</td><br>      <td>의견없음</td><br>      <td>qwer<strong><strong></strong></strong></td><br>      <td>580</td><br>      <td>3</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>19</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>    <tr><br>      <th>20</th><br>      <td>2018.12.11 15:16</td><br>      <td>장난</td><br>      <td>의견없음</td><br>      <td>lds8</td><br>      <td>580</td><br>      <td>5</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>21</th><br>      <td>2018.12.11 17:09</td><br>      <td>장난</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>306</td><br>      <td>6</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>22</th><br>      <td>2018.12.11 09:13</td><br>      <td>그냥</td><br>      <td>의견없음</td><br>      <td>lds8</td><br>      <td>555</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>23</th><br>      <td>2018.12.11 08:16</td><br>      <td>황가야~~  [2]</td><br>      <td>의견없음</td><br>      <td>mell<strong><strong></strong></strong></td><br>      <td>594</td><br>      <td>11</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>24</th><br>      <td>2018.12.10 20:00</td><br>      <td>16개월 남았다</td><br>      <td>중립</td><br>      <td>stoc</td><br>      <td>1061</td><br>      <td>3</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>25</th><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>      <td>NaN</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>this data frame is what you want to clean up</strong></li>
 <li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line">html_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>0</th><br>      <th>1</th><br>      <th>2</th><br>      <th>3</th><br>      <th>4</th><br>      <th>5</th><br>      <th>6</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2018.12.17 20:10</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>129</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2018.12.17 22:01</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9</td><br>      <td>56</td><br>      <td>2</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2018.12.17 10:14</td><br>      <td>어떻해야하나요ㅜ.ㅜ  [2]</td><br>      <td>의견없음</td><br>      <td>tera<strong><strong></strong></strong></td><br>      <td>583</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2018.12.14 19:02</td><br>      <td>담주는 완전 지하로 직행!!  [1]</td><br>      <td>의견없음</td><br>      <td>thch</td><br>      <td>1014</td><br>      <td>3</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2018.12.14 15:09</td><br>      <td>화난 투자자들(다음 대상은 황철주)  [7]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>951</td><br>      <td>22</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2018.12.14 12:01</td><br>      <td>오천원 아래서 기다리고 있네요  [3]</td><br>      <td>의견없음</td><br>      <td>jop1</td><br>      <td>625</td><br>      <td>2</td><br>      <td>12</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2018.12.14 11:56</td><br>      <td>진짜 욕나온다~  [1]</td><br>      <td>의견없음</td><br>      <td>9090<strong><strong></strong></strong></td><br>      <td>544</td><br>      <td>6</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2018.12.14 10:38</td><br>      <td>시총 3천억이면  [4]</td><br>      <td>의견없음</td><br>      <td>ljw1</td><br>      <td>869</td><br>      <td>2</td><br>      <td>9</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2018.12.14 10:19</td><br>      <td>놀이터</td><br>      <td>의견없음</td><br>      <td>lds8<em>**</em></td><br>      <td>440</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
 <li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line">html_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>날짜</td><br>      <td>제목</td><br>      <td>투자의견</td><br>      <td>글쓴이</td><br>      <td>조회</td><br>      <td>공감</td><br>      <td>비공감</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>2018.12.17 20:10</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>129</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2018.12.17 22:01</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9</td><br>      <td>56</td><br>      <td>2</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2018.12.17 10:14</td><br>      <td>어떻해야하나요ㅜ.ㅜ  [2]</td><br>      <td>의견없음</td><br>      <td>tera<strong><strong></strong></strong></td><br>      <td>583</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2018.12.14 19:02</td><br>      <td>담주는 완전 지하로 직행!!  [1]</td><br>      <td>의견없음</td><br>      <td>thch</td><br>      <td>1014</td><br>      <td>3</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2018.12.14 15:09</td><br>      <td>화난 투자자들(다음 대상은 황철주)  [7]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>951</td><br>      <td>22</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2018.12.14 12:01</td><br>      <td>오천원 아래서 기다리고 있네요  [3]</td><br>      <td>의견없음</td><br>      <td>jop1</td><br>      <td>625</td><br>      <td>2</td><br>      <td>12</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2018.12.14 11:56</td><br>      <td>진짜 욕나온다~  [1]</td><br>      <td>의견없음</td><br>      <td>9090<strong><strong></strong></strong></td><br>      <td>544</td><br>      <td>6</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2018.12.14 10:38</td><br>      <td>시총 3천억이면  [4]</td><br>      <td>의견없음</td><br>      <td>ljw1</td><br>      <td>869</td><br>      <td>2</td><br>      <td>9</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2018.12.14 10:19</td><br>      <td>놀이터</td><br>      <td>의견없음</td><br>      <td>lds8<em>**</em></td><br>      <td>440</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>remove first row by using [drop index or [1:]] </strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df.drop(html_df.index[<span class="number">0</span>]).head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>2</th><br>      <td>2018.12.17 20:10</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>129</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2018.12.17 22:01</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9</td><br>      <td>56</td><br>      <td>2</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2018.12.17 10:14</td><br>      <td>어떻해야하나요ㅜ.ㅜ  [2]</td><br>      <td>의견없음</td><br>      <td>tera<strong><strong></strong></strong></td><br>      <td>583</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2018.12.14 19:02</td><br>      <td>담주는 완전 지하로 직행!!  [1]</td><br>      <td>의견없음</td><br>      <td>thch</td><br>      <td>1014</td><br>      <td>3</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2018.12.14 15:09</td><br>      <td>화난 투자자들(다음 대상은 황철주)  [7]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>951</td><br>      <td>22</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2018.12.14 12:01</td><br>      <td>오천원 아래서 기다리고 있네요  [3]</td><br>      <td>의견없음</td><br>      <td>jop1</td><br>      <td>625</td><br>      <td>2</td><br>      <td>12</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2018.12.14 11:56</td><br>      <td>진짜 욕나온다~  [1]</td><br>      <td>의견없음</td><br>      <td>9090<strong><strong></strong></strong></td><br>      <td>544</td><br>      <td>6</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2018.12.14 10:38</td><br>      <td>시총 3천억이면  [4]</td><br>      <td>의견없음</td><br>      <td>ljw1</td><br>      <td>869</td><br>      <td>2</td><br>      <td>9</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2018.12.14 10:19</td><br>      <td>놀이터</td><br>      <td>의견없음</td><br>      <td>lds8<strong><strong></strong></strong></td><br>      <td>440</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2018.12.13 21:57</td><br>      <td>뭐하는 회사인가 ?  [1]</td><br>      <td>의견없음</td><br>      <td>vvip</td><br>      <td>671</td><br>      <td>14</td><br>      <td>2</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">1</span>:].head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<div><br><style scoped><br>    .dataframe tbody tr th:only-of-type {<br>        vertical-align: middle;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br><br>    .dataframe thead th {<br>        text-align: right;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>날짜</th><br>      <th>제목</th><br>      <th>투자의견</th><br>      <th>글쓴이</th><br>      <th>조회</th><br>      <th>공감</th><br>      <th>비공감</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>2</th><br>      <td>2018.12.17 20:10</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9<strong><strong></strong></strong></td><br>      <td>129</td><br>      <td>5</td><br>      <td>0</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>2018.12.17 22:01</td><br>      <td>상호변경.똥주.주성</td><br>      <td>의견없음</td><br>      <td>jgh9</td><br>      <td>56</td><br>      <td>2</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>2018.12.17 10:14</td><br>      <td>어떻해야하나요ㅜ.ㅜ  [2]</td><br>      <td>의견없음</td><br>      <td>tera<strong><strong></strong></strong></td><br>      <td>583</td><br>      <td>1</td><br>      <td>2</td><br>    </tr><br>    <tr><br>      <th>5</th><br>      <td>2018.12.14 19:02</td><br>      <td>담주는 완전 지하로 직행!!  [1]</td><br>      <td>의견없음</td><br>      <td>thch</td><br>      <td>1014</td><br>      <td>3</td><br>      <td>5</td><br>    </tr><br>    <tr><br>      <th>6</th><br>      <td>2018.12.14 15:09</td><br>      <td>화난 투자자들(다음 대상은 황철주)  [7]</td><br>      <td>의견없음</td><br>      <td>ssti<strong><strong></strong></strong></td><br>      <td>951</td><br>      <td>22</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>8</th><br>      <td>2018.12.14 12:01</td><br>      <td>오천원 아래서 기다리고 있네요  [3]</td><br>      <td>의견없음</td><br>      <td>jop1</td><br>      <td>625</td><br>      <td>2</td><br>      <td>12</td><br>    </tr><br>    <tr><br>      <th>9</th><br>      <td>2018.12.14 11:56</td><br>      <td>진짜 욕나온다~  [1]</td><br>      <td>의견없음</td><br>      <td>9090<strong><strong></strong></strong></td><br>      <td>544</td><br>      <td>6</td><br>      <td>3</td><br>    </tr><br>    <tr><br>      <th>10</th><br>      <td>2018.12.14 10:38</td><br>      <td>시총 3천억이면  [4]</td><br>      <td>의견없음</td><br>      <td>ljw1</td><br>      <td>869</td><br>      <td>2</td><br>      <td>9</td><br>    </tr><br>    <tr><br>      <th>11</th><br>      <td>2018.12.14 10:19</td><br>      <td>놀이터</td><br>      <td>의견없음</td><br>      <td>lds8<strong><strong></strong></strong></td><br>      <td>440</td><br>      <td>7</td><br>      <td>1</td><br>    </tr><br>    <tr><br>      <th>12</th><br>      <td>2018.12.13 21:57</td><br>      <td>뭐하는 회사인가 ?  [1]</td><br>      <td>의견없음</td><br>      <td>vvip</td><br>      <td>671</td><br>      <td>14</td><br>      <td>2</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>It is very short code ! </strong></li>
 </ul>
@@ -345,17 +190,13 @@
 	  
 	  <div class="article-tags tags">
       
-        <a href="/tags/python/">python</a>
+        <a href="/tags/python-crawling/">python; crawling;</a>
       
 	  </div>
     
 		
 	
 		<div class="art-item-footer">
-				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/12/17/20170605_pandas_read.html/" rel="prev" title="">
-						 
-					</a></span>
 				
 				
 					<span class="art-item-right">next：<a href="/2018/12/17/data_analysis_life/" rel="next" title="데이터 분석의 첫 걸음">
@@ -402,7 +243,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class="content">
-        <a href="/tags/python/" style="font-size: 14px; color: #808080">python</a> <a href="/tags/데이터분석/" style="font-size: 14px; color: #808080">데이터분석</a>
+        <a href="/tags/python-crawling/" style="font-size: 14px; color: #808080">python; crawling;</a> <a href="/tags/데이터분석/" style="font-size: 14px; color: #808080">데이터분석</a>
     </div>
 </div>
 

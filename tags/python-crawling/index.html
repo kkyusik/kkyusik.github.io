@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Aboutdd | Blog TEST</title>
+  <title>Tag: python; crawling; | Blog TEST</title>
   <meta name="description" content="">
   <meta name="keywords" content="geography,transportation,spatial analysis">
   <meta name="HandheldFriendly" content="True">
@@ -12,18 +12,14 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="Blog TEST">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个热衷于造轮子的少年，喜欢：  Python Javascript Go  同时我也喜欢：  Doctor Who Chopin &amp;amp;&amp;amp; Rachmaninov  我的联系方式：  Telegram:  @kevinsfork Github：   stkevintan Twttier:   Kevinsfork Mail:      &amp;#x73;&amp;#x74;&amp;#107;&amp;#101;">
-<meta name="keywords" content="geography,transportation,spatial analysis">
+  <meta name="keywords" content="geography,transportation,spatial analysis">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Aboutdd">
-<meta property="og:url" content="https://kkyusik.github.io/about/index.html">
+<meta property="og:title" content="Blog TEST">
+<meta property="og:url" content="https://kkyusik.github.io/tags/python-crawling/index.html">
 <meta property="og:site_name" content="Blog TEST">
-<meta property="og:description" content="一个热衷于造轮子的少年，喜欢：  Python Javascript Go  同时我也喜欢：  Doctor Who Chopin &amp;amp;&amp;amp; Rachmaninov  我的联系方式：  Telegram:  @kevinsfork Github：   stkevintan Twttier:   Kevinsfork Mail:      &amp;#x73;&amp;#x74;&amp;#107;&amp;#101;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-17T06:59:53.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aboutdd">
-<meta name="twitter:description" content="一个热衷于造轮子的少年，喜欢：  Python Javascript Go  同时我也喜欢：  Doctor Who Chopin &amp;amp;&amp;amp; Rachmaninov  我的联系方式：  Telegram:  @kevinsfork Github：   stkevintan Twttier:   Kevinsfork Mail:      &amp;#x73;&amp;#x74;&amp;#107;&amp;#101;">
+<meta name="twitter:title" content="Blog TEST">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -124,59 +120,90 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="page-" class="post white-box article-type-page" itemscope="" itemprop="blogPost">
-	<section class="meta">
-	<h2 class="title">
-  	<a href="/about/index.html">
-    	Aboutdd
-    </a>
-  </h2>
-	<time>
-	  Nov 23, 2016
-	</time>
+        
+  <script>
+    window.subData= { title:'Tag : python; crawling;'}
+  </script>
+
+<section class="post-list">
 	
-	</section>
-	
-		<section class="toc-wrapper"></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<p>一个热衷于造轮子的少年，喜欢：</p>
+    <div class="post-wrapper">
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/12/17/20170605_pandas_read.html/">
+        Scraping web table by using pandas.read_html
+      </a>
+    </h2>
+    
+    <time>
+      Dec 17, 2018
+    </time>
+		
+    
+    <div class="cats">
+        <a href="/categories/Data-Analysis/">Data Analysis</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>Kyusik Kim</strong><br><br><strong>5 June 2017</strong></p>
+<p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
 <ul>
-<li>Python</li>
-<li>Javascript</li>
-<li>Go</li>
+<li><strong>Import pandas</strong></li>
 </ul>
-<p>同时我也喜欢：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Doctor Who</li>
-<li>Chopin &amp;&amp; Rachmaninov</li>
+<li><strong>By using read.html you can scrape what you want</strong></li>
+<li><strong>In this case, website that you want to scrape must contain table data</strong></li>
+<li><strong>assign finance.naver.com to html_df</strong></li>
 </ul>
-<p>我的联系方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>Telegram:  <code>@kevinsfork</code></li>
-<li>Github：   <a href="https://github.com/stkevintan" target="_blank" rel="noopener">stkevintan</a></li>
-<li>Twttier:   <a href="https://twitter.com/kevinsfork" target="_blank" rel="noopener">Kevinsfork</a></li>
-<li>Mail:      <a href="mailto:&#x73;&#x74;&#107;&#101;&#x76;&#105;&#x6e;&#x74;&#x61;&#x6e;&#x40;&#122;&#x6a;&#117;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;" target="_blank" rel="noopener">&#x73;&#x74;&#107;&#101;&#x76;&#105;&#x6e;&#x74;&#x61;&#x6e;&#x40;&#122;&#x6a;&#117;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;</a></li>
+<li><strong>first data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>second data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>this data frame is what you want to clean up</strong></li>
+<li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
+<li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>remove first row by using [drop index or [1:]] </strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>It is very short code ! </strong></li>
 </ul>
 
-  	</div>
-	  
-		
-	
-	</section>
-	
-		<section id="comments">
-			<div id="disqus_thread"></div>
-		</section>
-	
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/python-crawling/">python; crawling;</a>
+      
+	  </div>
+    
+  </section>
 </article>
-<script>
-	window.subData = {
-		title: 'Aboutdd',
-		tools: true
-	}
-</script>
+    </div>
+  
+</section>
+
 
       </div>
       <aside class='l_side'>
@@ -242,13 +269,11 @@
 <script>
   var disqus_shortname = 'iamkyusik';
   
-  var disqus_url = 'https://kkyusik.github.io/about/index.html';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
