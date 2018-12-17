@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T15:58:20.294Z</updated>
+  <updated>2018-12-17T07:52:12.639Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Scraping web table by using pandas.read_html</title>
-    <link href="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"/>
-    <id>https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/</id>
-    <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-17T15:58:20.294Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;Kyusik Kim&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When you want to scrape some website, you can use pandas.read_html
-      
-    
-    </summary>
-    
-      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
-    
-    
-      <category term="python; crawling;" scheme="https://kkyusik.github.io/tags/python-crawling/"/>
-    
-  </entry>
   
   <entry>
     <title>데이터 분석의 첫 걸음</title>
