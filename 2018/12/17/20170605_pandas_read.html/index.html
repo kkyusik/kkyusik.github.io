@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Everything is fine">
     <title>Scraping web table by using pandas.read_html - Everything is fine</title>
-    <meta name="author" content="Kyusik">
+    <meta name="author" content="Q">
     
         <meta name="keywords" content="geography,transportation,spatial analysis,">
     
@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"\n5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T13:53:47-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"Introduction of Screaping Web Table using pandas.read_html","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/","keywords":"python, crawling, data analysis"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"\n5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T13:53:47-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"Introduction of Screaping Web Table using pandas.read_html","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Q","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/","keywords":"python, crawling, data analysis"}</script>
     <meta name="description" content="Introduction of Screaping Web Table using pandas.read_html">
 <meta name="keywords" content="python,crawling,data analysis">
 <meta property="og:type" content="blog">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/index.html">
 <meta property="og:site_name" content="Everything is fine">
 <meta property="og:description" content="Introduction of Screaping Web Table using pandas.read_html">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="ko">
 <meta property="og:updated_time" content="2018-12-17T18:53:47.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scraping web table by using pandas.read_html">
@@ -67,7 +67,7 @@
             <a class="header-right-picture " href="#about">
         
         
-            <img class="header-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
+            <img class="header-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Foto de autor">
         
         </a>
     
@@ -85,9 +85,9 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
+                    <img class="sidebar-profile-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Foto de autor">
                 </a>
-                <h4 class="sidebar-profile-name">Kyusik</h4>
+                <h4 class="sidebar-profile-name">Q</h4>
                 
                     <h5 class="sidebar-profile-bio"><p>author.bio</p>
 </h5>
@@ -99,46 +99,46 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/ " title="Home">
+                        <a class="sidebar-button-link " href="/ " title="Inicio">
                     
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Home</span>
+                        <span class="sidebar-button-desc">Inicio</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/all-categories" title="Categories">
+                        <a class="sidebar-button-link " href="/all-categories" title="Categorías">
                     
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Categories</span>
+                        <span class="sidebar-button-desc">Categorías</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/all-tags" title="Tags">
+                        <a class="sidebar-button-link " href="/all-tags" title="Etiquetas">
                     
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tags</span>
+                        <span class="sidebar-button-desc">Etiquetas</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
+                        <a class="sidebar-button-link " href="/all-archives" title="Archivos">
                     
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Archives</span>
+                        <span class="sidebar-button-desc">Archivos</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="#about" title="About">
+                        <a class="sidebar-button-link " href="#about" title="Acerca de">
                     
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">About</span>
+                        <span class="sidebar-button-desc">Acerca de</span>
                     </a>
             </li>
             
@@ -192,11 +192,11 @@
         <div class="post-meta">
     <time datetime="2018-12-17T10:38:38-05:00">
 	
-		    Dec 17, 2018
+		    17 12월 2018
     	
     </time>
     
-        <span>in </span>
+        <span>en </span>
         
     <a class="category-link" href="/categories/Data-Analysis/">Data Analysis</a>
 
@@ -257,7 +257,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br>
+                <span class="text-color-light text-small">ETIQUETADO EN</span><br>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/crawling/">crawling</a> <a class="tag tag--primary tag--small t-link" href="/tags/data-analysis/">data analysis</a> <a class="tag tag--primary tag--small t-link" href="/tags/python/">python</a>
 
@@ -272,15 +272,15 @@
                     <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="SIGUIENTE: 데이터 분석의 첫 걸음">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">SIGUIENTE</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
@@ -296,7 +296,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -304,7 +304,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -312,7 +312,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -352,7 +352,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2018 Kyusik. All Rights Reserved.
+        Copyrights &copy; 2018 Q. All Rights Reserved.
     </span>
 </footer>
 
@@ -367,15 +367,15 @@
                     <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="NEXT: 데이터 분석의 첫 걸음">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/data_analysis_life/" data-tooltip="데이터 분석의 첫 걸음" aria-label="SIGUIENTE: 데이터 분석의 첫 걸음">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">SIGUIENTE</span>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
@@ -391,7 +391,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -399,7 +399,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -407,7 +407,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/" title="Compartir en Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -442,7 +442,7 @@
                 
                 <li class="share-option">
                     <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
-                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Compartir en Facebook</span>
                     </a>
                 </li>
             
@@ -450,7 +450,7 @@
                 
                 <li class="share-option">
                     <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
-                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Compartir en Twitter</span>
                     </a>
                 </li>
             
@@ -458,7 +458,7 @@
                 
                 <li class="share-option">
                     <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/">
-                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Compartir en Google+</span>
                     </a>
                 </li>
             
@@ -481,9 +481,9 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
+            <img id="about-card-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Foto de autor">
         
-            <h4 id="about-card-name">Kyusik</h4>
+            <h4 id="about-card-name">Q</h4>
         
             <div id="about-card-bio"><p>author.bio</p>
 </div>
