@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kkyusik.github.io/"/>
-  <updated>2018-12-17T07:21:35.711Z</updated>
+  <updated>2018-12-17T07:23:09.523Z</updated>
   <id>http://kkyusik.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test_discuss2</title>
+    <link href="http://kkyusik.github.io/2018/12/17/test-discuss2/"/>
+    <id>http://kkyusik.github.io/2018/12/17/test-discuss2/</id>
+    <published>2018-12-17T07:23:09.000Z</published>
+    <updated>2018-12-17T07:23:09.523Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>test_discuss</title>
