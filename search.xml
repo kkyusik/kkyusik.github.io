@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title>dd</title>
+      <link href="/2018/12/17/dd/"/>
+      <url>/2018/12/17/dd/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
+      <title>Dasymetric Map for Estimating Spatial Distribution of Children</title>
+      <link href="/2018/12/17/dasy_children/"/>
+      <url>/2018/12/17/dasy_children/</url>
+      
+        <content type="html"><![CDATA[<!-- excerpt --><p>Techniques used: Dasymetric mapping, GWR<br>Tools: ArcGIS 1.2, R</p><p><img src="dasy_image\children_pop_2009.png" alt="alt text" title="Map 1"></p><p>To estimate and visualize a distribution of infants in 2009, Seoul, Korea, this dasymetric map was made by using GWR (Geographically Weighted Regression) and spatial interpolation techniques. </p><p>The results in the map I indicate that there are more infants from pale yellow to dark red in a grid of 200m x 200m. The map becomes fundamental information to calculate equity measure by comparison with the calculated index of accessibility. </p><hr><p>Reference<br>Kim, Kyusik, 2016, A Study on Spatial Equity of Opportunities to Use Public Childcare Services Focusing on National/Public Childcare Centers in Seoul, Seoul studies 17(1): 45-64.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Scraping web table by using pandas.read_html</title>
       <link href="/2018/12/17/20170605_pandas_read.html/"/>
       <url>/2018/12/17/20170605_pandas_read.html/</url>

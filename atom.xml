@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T18:53:47.999Z</updated>
+  <updated>2018-12-17T19:26:01.397Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,15 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>dd</title>
+    <link href="https://kkyusik.github.io/2018/12/17/dd/"/>
+    <id>https://kkyusik.github.io/2018/12/17/dd/</id>
+    <published>2018-12-17T19:26:01.000Z</published>
+    <updated>2018-12-17T19:26:01.397Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dasymetric Map for Estimating Spatial Distribution of Children</title>
+    <link href="https://kkyusik.github.io/2018/12/17/dasy_children/"/>
+    <id>https://kkyusik.github.io/2018/12/17/dasy_children/</id>
+    <published>2018-12-17T19:25:44.999Z</published>
+    <updated>2018-12-17T19:25:32.159Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post shows a map that I made when I was in graduate school.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Scraping web table by using pandas.read_html</title>
     <link href="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/</id>
     <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-17T18:53:47.999Z</updated>
+    <updated>2018-12-17T19:11:44.991Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Introduction of Screaping Web Table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;Introduction of scraping web table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -45,7 +81,7 @@
     <link href="https://kkyusik.github.io/2018/12/17/data_analysis_life/"/>
     <id>https://kkyusik.github.io/2018/12/17/data_analysis_life/</id>
     <published>2018-12-17T07:46:59.108Z</published>
-    <updated>2018-12-17T18:48:37.343Z</updated>
+    <updated>2018-12-17T18:52:36.679Z</updated>
     
     <summary type="html">
     
