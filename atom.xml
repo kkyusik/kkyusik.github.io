@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T07:46:59.244Z</updated>
+  <updated>2018-12-17T07:48:50.310Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -21,22 +21,22 @@
     <link href="https://kkyusik.github.io/2018/12/17/data_analysis_life/"/>
     <id>https://kkyusik.github.io/2018/12/17/data_analysis_life/</id>
     <published>2018-12-17T07:46:59.108Z</published>
-    <updated>2018-12-17T07:46:59.244Z</updated>
+    <updated>2018-12-17T07:48:50.310Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt; 참고 &lt;/h2&gt;
-
-&lt;p&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
-&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 과거에 비해 많아지기도 했고, 어떤 결과를 보여주기에 효과적이기 때문인 것 같다. 나는 나
+        &lt;p&gt;&lt;strong&gt;참고&lt;/strong&gt;&lt;br&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
+&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 과거에 비해 많아지기도 했고, 어떤 결과를 보여주기에 효과적이기 때문인 것 
       
     
     </summary>
     
       <category term="cfff" scheme="https://kkyusik.github.io/categories/cfff/"/>
     
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
   </entry>
   
