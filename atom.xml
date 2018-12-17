@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T15:42:35.375Z</updated>
+  <updated>2018-12-17T15:51:07.552Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,20 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Scraping web table by using pandas.read_html</title>
+    <title></title>
     <link href="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/</id>
-    <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-17T15:42:35.375Z</updated>
+    <published>2018-12-17T15:51:08.913Z</published>
+    <updated>2018-12-17T15:51:07.552Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h1&gt;Scraping web table by using pandas.read_html&lt;/h1&gt;
+        &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;
 
-&lt;p&gt;&lt;strong&gt;Kyusik Kim&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When you wa
+&lt;title&gt;20170605_pandas_read.html&lt;/title&gt;
+
+&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Scraping web table by using pandas.read_html</title>
+    <link href="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"/>
+    <id>https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/</id>
+    <published>2018-12-17T15:38:38.000Z</published>
+    <updated>2018-12-17T15:50:54.940Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Kyusik Kim&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When you want to scrape some website, you can use pandas.read_html
       
     
     </summary>
