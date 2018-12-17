@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T16:02:54.305Z</updated>
+  <updated>2018-12-17T18:51:52.527Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -21,14 +21,16 @@
     <link href="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/</id>
     <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-17T16:02:54.305Z</updated>
+    <updated>2018-12-17T18:51:52.527Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;Kyusik Kim&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When you want to scrape some website, you can use pandas.read_html
+        &lt;p&gt;Introduction of Screaping Web Table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- exerpt --&gt;
+&lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wh
       
     
     </summary>

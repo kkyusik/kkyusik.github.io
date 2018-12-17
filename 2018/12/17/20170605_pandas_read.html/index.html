@@ -15,19 +15,19 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"Kyusik Kim5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n\n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T11:02:54-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/","keywords":"python, crawling, data analysis"}</script>
-    <meta name="description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"articleBody":"Introduction of Screaping Web Table using pandas.read_html\n\n5 June 2017\nWhen you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests\n\nImport pandas\n\n1import pandas as pd\n\nBy using read.html you can scrape what you want\nIn this case, website that you want to scrape must contain table data\nassign finance.naver.com to html_df\n\n1html_df = pd.read_html(\"http://finance.naver.com/item/board.nhn?code=036930\", encoding = 'euc-kr')\n1# print(html_df)\n\nfirst data frame is\n\n1# html_df[0]\n\nsecond data frame is\n\n1# html_df[1]\n\nthis data frame is what you want to clean up\ntherefore, you can use dropna() method to remove “NaN” in data frame\n\n12html_df = html_df[1].dropna()#html_df.head(10)\n\nas you know, the header of html_df is [0, 1, 2, 3, 4,…]\nby using html_df.columns = html_df.iloc[0], you can replace columns name\n\n12html_df.columns = html_df.iloc[0]#html_df.head(10)\n\nremove first row by using [drop index or [1:]] \n\n1#html_df.drop(html_df.index[0]).head(10)\n1#html_df[1:].head(10)\n\nIt is very short code ! \n\n","dateCreated":"2018-12-17T10:38:38-05:00","dateModified":"2018-12-17T13:51:52-05:00","datePublished":"2018-12-17T10:38:38-05:00","description":"","headline":"Scraping web table by using pandas.read_html","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/"},"publisher":{"@type":"Organization","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg","logo":{"@type":"ImageObject","url":"Bacnground_Seaside.jpg"}},"url":"https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/","keywords":"python, crawling, data analysis"}</script>
+    <meta name="description" content="Introduction of Screaping Web Table using pandas.read_html  5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import">
 <meta name="keywords" content="python,crawling,data analysis">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Scraping web table by using pandas.read_html">
 <meta property="og:url" content="https://kkyusik.github.io/2018/12/17/20170605_pandas_read.html/index.html">
 <meta property="og:site_name" content="Everything is fine">
-<meta property="og:description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
+<meta property="og:description" content="Introduction of Screaping Web Table using pandas.read_html  5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-17T16:02:54.305Z">
+<meta property="og:updated_time" content="2018-12-17T18:51:52.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scraping web table by using pandas.read_html">
-<meta name="twitter:description" content="Kyusik Kim5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import pandas as pd  By using read.html you can scrape w">
+<meta name="twitter:description" content="Introduction of Screaping Web Table using pandas.read_html  5 June 2017 When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests  Import pandas  1import">
     
     
         
@@ -210,7 +210,9 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p><strong>Kyusik Kim</strong><br><br><strong>5 June 2017</strong></p>
+            <p>Introduction of Screaping Web Table using <strong>pandas.read_html</strong></p>
+<!-- exerpt -->
+<p><strong>5 June 2017</strong></p>
 <p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
 <ul>
 <li><strong>Import pandas</strong></li>
