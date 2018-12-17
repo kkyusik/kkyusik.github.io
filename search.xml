@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>Scraping web table by using pandas.read_html</title>
+      <link href="/2018/12/17/20170605_pandas_read.html/"/>
+      <url>/2018/12/17/20170605_pandas_read.html/</url>
+      
+        <content type="html"><![CDATA[<p><strong>Kyusik Kim</strong><br><br><strong>5 June 2017</strong></p><p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p><ul><li><strong>Import pandas</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure><ul><li><strong>By using read.html you can scrape what you want</strong></li><li><strong>In this case, website that you want to scrape must contain table data</strong></li><li><strong>assign finance.naver.com to html_df</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure><ul><li><strong>first data frame is</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure><ul><li><strong>second data frame is</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure><ul><li><strong>this data frame is what you want to clean up</strong></li><li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure><ul><li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li><li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure><ul><li><strong>remove first row by using [drop index or [1:]] </strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure><ul><li><strong>It is very short code ! </strong></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> crawling </tag>
+            
+            <tag> data analysis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>데이터 분석의 첫 걸음</title>
       <link href="/2018/12/17/data_analysis_life/"/>
       <url>/2018/12/17/data_analysis_life/</url>

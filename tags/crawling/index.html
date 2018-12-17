@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives | Blog TEST</title>
+  <title>Tag: crawling | Blog TEST</title>
   <meta name="description" content="">
   <meta name="keywords" content="geography,transportation,spatial analysis">
   <meta name="HandheldFriendly" content="True">
@@ -15,7 +15,7 @@
   <meta name="keywords" content="geography,transportation,spatial analysis">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog TEST">
-<meta property="og:url" content="https://kkyusik.github.io/archives/index.html">
+<meta property="og:url" content="https://kkyusik.github.io/tags/crawling/index.html">
 <meta property="og:site_name" content="Blog TEST">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -121,41 +121,93 @@
     <div class='container clearfix'>
       <div class='l_main'>
         
-  <article id="archive-page" class="post article white-box">
-    <section class="meta">
-      <h2 class="title">
-        <a href="javascript:void(0)">
-          Archives
-        </a>
-      </h2>
-    </section>
-    <section class="archive">
+  <script>
+    window.subData= { title:'Tag : crawling'}
+  </script>
+
+<section class="post-list">
+	
+    <div class="post-wrapper">
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/12/17/20170605_pandas_read.html/">
+        Scraping web table by using pandas.read_html
+      </a>
+    </h2>
+    
+    <time>
+      Dec 17, 2018
+    </time>
+		
+    
+    <div class="cats">
+        <a href="/categories/Data-Analysis/">Data Analysis</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p><strong>Kyusik Kim</strong><br><br><strong>5 June 2017</strong></p>
+<p>When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests</p>
+<ul>
+<li><strong>Import pandas</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>By using read.html you can scrape what you want</strong></li>
+<li><strong>In this case, website that you want to scrape must contain table data</strong></li>
+<li><strong>assign finance.naver.com to html_df</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df = pd.read_html(<span class="string">"http://finance.naver.com/item/board.nhn?code=036930"</span>, encoding = <span class="string">'euc-kr'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print(html_df)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>first data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[0]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>second data frame is</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># html_df[1]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>this data frame is what you want to clean up</strong></li>
+<li><strong>therefore, you can use dropna() method to remove “NaN” in data frame</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>as you know, the header of html_df is [0, 1, 2, 3, 4,…]</strong></li>
+<li><strong>by using html_df.columns = html_df.iloc[0], you can replace columns name</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df.columns = html_df.iloc[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#html_df.head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>remove first row by using [drop index or [1:]] </strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df.drop(html_df.index[0]).head(10)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#html_df[1:].head(10)</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>It is very short code ! </strong></li>
+</ul>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
       
-            <div class="archive-item archive-year mark">
-              <a id="archive-year-2018" href="/archives/2018/">
-                2018
-              </a>
-            </div>
+        <a href="/tags/python/">python</a>
       
-          <div class="archive-item archive-post mark">
-            <a href="/2018/12/17/20170605_pandas_read.html/">
-              <time>12-17</time>
-              <span class="title"><span>Scraping web table by using pandas.read_html</span></span>
-            </a>
-          </div>
+        <a href="/tags/crawling/">crawling</a>
       
-          <div class="archive-item archive-post mark">
-            <a href="/2018/12/17/data_analysis_life/">
-              <time>12-17</time>
-              <span class="title"><span>데이터 분석의 첫 걸음</span></span>
-            </a>
-          </div>
+        <a href="/tags/data-analysis/">data analysis</a>
       
-    </section>
-  </article>
-  <!--
+	  </div>
+    
+  </section>
+</article>
+    </div>
   
-    -->
+</section>
+
 
       </div>
       <aside class='l_side'>
