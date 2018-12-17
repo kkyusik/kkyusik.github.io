@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title>Hot Spot of Housing Transaction Flows</title>
+      <link href="/2018/12/17/005-spatial_network/"/>
+      <url>/2018/12/17/005-spatial_network/</url>
+      
+        <content type="html"><![CDATA[<!-- excerpt --><p>Data sources: Housing transaction data in Ministry of Land, Infrastructure and Transport<br>Techniques used: Spatial network autocorrelation<br>Tools: Python, ArcGIS 10.2</p><p><img src="https://user-images.githubusercontent.com/28834239/50112342-00a2a400-020d-11e9-9ba8-09348584b710.png" alt="transaction by age"></p><p>This map represents the mainstream of housing transaction in Seoul Metropolitan Area. It was made by using data containing information regarding housing traders and applied spatial network autocorrelation to detect spatial autocorrelation in the network and to estimate statistical patterns, like hot-spot.</p><p>As a result, it shows a prominent transaction flow among regions in total transaction networks. Strong tendency is found that those who live southern regions purchased more southern regions’ housing which is represented by red lines toward the southern direction. It means that those regions are the hot spot in all transaction in Seoul Metropolitan Area.</p><hr><p>Reference<br>Park, Cheongyu et al., 2015, Microdynamic Analysis and Policy Simulation Model on Real Estate Market in Korea(III). Korea Research Institute for Human Settlements. KRIHS 15-32. (Government Reports)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> mapping </tag>
+            
+            <tag> spatial network autocorrelation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Mapping Spatial Mismatch between Opportunity and Population</title>
       <link href="/2018/12/17/004-bilisa_map/"/>
       <url>/2018/12/17/004-bilisa_map/</url>

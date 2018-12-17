@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T20:03:41.087Z</updated>
+  <updated>2018-12-17T20:06:13.118Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hot Spot of Housing Transaction Flows</title>
+    <link href="https://kkyusik.github.io/2018/12/17/005-spatial_network/"/>
+    <id>https://kkyusik.github.io/2018/12/17/005-spatial_network/</id>
+    <published>2018-12-17T20:04:13.044Z</published>
+    <updated>2018-12-17T20:06:13.118Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
+    
+      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
+    
+      <category term="spatial network autocorrelation" scheme="https://kkyusik.github.io/tags/spatial-network-autocorrelation/"/>
+    
+  </entry>
   
   <entry>
     <title>Mapping Spatial Mismatch between Opportunity and Population</title>
