@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"Website","@id":"https://kkyusik.github.io","author":{"@type":"Person","name":"Kyusik","sameAs":["https://github.com/kkyusik"]},"name":"Everything is fine","description":null,"url":"https://kkyusik.github.io","keywords":"geography, transportation, spatial analysis"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"Website","@id":"https://kkyusik.github.io","author":{"@type":"Person","name":"Kyusik","sameAs":["https://github.com/kkyusik"],"image":"Bacnground_Seaside.jpg"},"name":"Everything is fine","description":null,"url":"https://kkyusik.github.io","keywords":"geography, transportation, spatial analysis"}</script>
     <meta name="description" content="Publications Hoobin Lee, Kyusik Kim, and Kyusang Kown, 2018, Capital and Landed Property Contradiction in Cluster Evolution: The case of Namsan-dong printing alley, Daegu, Journal of the Korean Geogra">
 <meta name="keywords" content="geography,transportation,spatial analysis">
 <meta property="og:type" content="blog">
@@ -32,6 +32,8 @@
     
         
     
+    
+        <meta property="og:image" content="https://kkyusik.github.io/assets/images/Bacnground_Seaside.jpg"/>
     
     
     
@@ -50,6 +52,10 @@
 
 
     
+        
+            
+        
+    
 
 <header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
@@ -61,6 +67,8 @@
             <a class="header-right-picture " href="#about">
         
         
+            <img class="header-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
+        
         </a>
     
 </header>
@@ -68,8 +76,23 @@
             <!-- Define author's picture -->
 
 
+
+        
+    
+
 <nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
+                </a>
+                <h4 class="sidebar-profile-name">Kyusik</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
         
         
             <ul class="sidebar-buttons">
@@ -261,6 +284,12 @@
         
         
             
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
         
         <li class="post-action">
             
@@ -275,6 +304,10 @@
 
         
         
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
             
         
     </div>
@@ -294,11 +327,17 @@
         
 
 
+    
+        
+    
+
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
             <i class="fa fa-times"></i>
         </div>
+        
+            <img id="about-card-picture" src="/assets/images/Bacnground_Seaside.jpg" alt="Author&#39;s picture">
         
             <h4 id="about-card-name">Kyusik</h4>
         
@@ -330,6 +369,23 @@
 <script src="/assets/js/script-dbd16rvloemmuxdzniplmnxxvwoz24eya9wol0b7vvmlokgqsjivmb8dnscy.min.js"></script>
 <!--SCRIPTS END-->
 
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://kkyusik.github.io/about/index.html';
+                 
+                    this.page.identifier = 'about/index.html';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'iamkyusik';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
     
 
 
