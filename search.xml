@@ -3,6 +3,95 @@
   
     
     <entry>
+      <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+      <link href="/2018/12/17/008-transactiomap/"/>
+      <url>/2018/12/17/008-transactiomap/</url>
+      
+        <content type="html"><![CDATA[<!-- excerpt --><p>Data sources: Housing transaction data from Ministry of Land, Korea.<br>Tools: QGIS</p><p><img src="https://user-images.githubusercontent.com/28834239/50112812-3431fe00-020e-11e9-83d4-0c7f154aacac.png" alt="flow"></p><p>The bubble map is to represent the relationship of Chon-se transaction (Chon-se means a unique type of housing transaction in Korea) in Seoul Metropolitan Area. </p><p>The map indicates that exodus from Seoul to outer regions is strong. We can intuitively know the tendency by bubbles that red color means more net-outflow and green one expresses more net-inflow. </p><p>This data and visualization method represent reversed Chon-se transaction which indicates the situation that home-owner could not easily find traders of Chon-se in Seoul.</p><hr><ul><li>In Goverment Report.</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> mapping </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Word Cloud of _Chon-se_ in the Internet Portal News</title>
+      <link href="/2018/12/17/007-wordcloud_rent/"/>
+      <url>/2018/12/17/007-wordcloud_rent/</url>
+      
+        <content type="html"><![CDATA[<!-- excerpt --><p>Data sources: Naver.com<br>Techniques used: Web crawling, Text analysis<br>Tools: Python, R</p><p><img src="https://user-images.githubusercontent.com/28834239/50112675-d7364800-020d-11e9-8a89-eb2d843aa217.png" alt="default"></p><p>This is a Word Cloud that represents a frequency of a word in a group of documents. The documents I used is a result of web crawling of Internet news in Naver, which is the biggest portal website in Korea.</p><p>To implement this procedure, the words are collected by Python in Internet website. In sequence, the words collected are grouped by using R.</p><p>Word Cloud means the frequency of word which represents from small to big. Therefore, you can perceive the importance of the word in documents in which you are interested. In this case, it shows that people are interested in rental prices.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
+            
+            <tag> crawling </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> word cloud </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Map for Evaluating Supply and Demand of Children Park</title>
+      <link href="/2018/12/17/006-childrenpark/"/>
+      <url>/2018/12/17/006-childrenpark/</url>
+      
+        <content type="html"><![CDATA[<!-- excerpt --><p>Tools: ArcGIS 1.2, R</p><p><img src="https://user-images.githubusercontent.com/28834239/50112567-7ad32880-020d-11e9-8b85-10dc123bbbe2.png" alt="supply_demand"></p><p>This map was made to calculate and estimate about index of supply and demand for Children’s park in Jungnang-gu, Seoul, Korea. </p><p>To estimate the index, at first, my colleagues and I calculated demand index by using factors that might affect children-park usage. Second, my team calculated supply index by calculating container index that is one of the ways to calculate accessibility. </p><p>As a result, pale yellow in the map shows a paucity in supply-demand of children park and dark red represents an excellent in supply-demand of children’s park.</p><hr><p>Reference<br>Park, Sohyun., Kim, Kyusik., and Koh, Byeongok, 2014, A study on the Estimation of Supply and Demand for Children’s Park, Seoul studies 15(3), 79-93..</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> mapping </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hot Spot of Housing Transaction Flows</title>
       <link href="/2018/12/17/005-spatial_network/"/>
       <url>/2018/12/17/005-spatial_network/</url>
