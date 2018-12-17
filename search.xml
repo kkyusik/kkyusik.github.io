@@ -3,17 +3,6 @@
   
     
     <entry>
-      <title>template</title>
-      <link href="/2018/12/17/template/"/>
-      <url>/2018/12/17/template/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
       <title>Scraping web table by using pandas.read_html</title>
       <link href="/2018/12/17/20170605_pandas_read.html/"/>
       <url>/2018/12/17/20170605_pandas_read.html/</url>
