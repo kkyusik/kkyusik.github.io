@@ -5,9 +5,9 @@
   <subtitle>fff</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://kkyusik.github.io/"/>
+  <link href="https://kkyusik.github.io/"/>
   <updated>2018-12-17T07:23:09.523Z</updated>
-  <id>http://kkyusik.github.io/</id>
+  <id>https://kkyusik.github.io/</id>
   
   <author>
     <name>Kyusik</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>test_discuss2</title>
-    <link href="http://kkyusik.github.io/2018/12/17/test-discuss2/"/>
-    <id>http://kkyusik.github.io/2018/12/17/test-discuss2/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/test-discuss2/"/>
+    <id>https://kkyusik.github.io/2018/12/17/test-discuss2/</id>
     <published>2018-12-17T07:23:09.000Z</published>
     <updated>2018-12-17T07:23:09.523Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>test_discuss</title>
-    <link href="http://kkyusik.github.io/2018/12/17/test-discuss/"/>
-    <id>http://kkyusik.github.io/2018/12/17/test-discuss/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/test-discuss/"/>
+    <id>https://kkyusik.github.io/2018/12/17/test-discuss/</id>
     <published>2018-12-17T07:21:35.000Z</published>
     <updated>2018-12-17T07:21:35.711Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>dd</title>
-    <link href="http://kkyusik.github.io/2018/12/17/dd/"/>
-    <id>http://kkyusik.github.io/2018/12/17/dd/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/dd/"/>
+    <id>https://kkyusik.github.io/2018/12/17/dd/</id>
     <published>2018-12-17T06:35:27.000Z</published>
     <updated>2018-12-17T06:46:52.592Z</updated>
     
@@ -61,17 +61,17 @@
     
     </summary>
     
-      <category term="fff" scheme="http://kkyusik.github.io/categories/fff/"/>
+      <category term="fff" scheme="https://kkyusik.github.io/categories/fff/"/>
     
     
-      <category term="Hi" scheme="http://kkyusik.github.io/tags/Hi/"/>
+      <category term="Hi" scheme="https://kkyusik.github.io/tags/Hi/"/>
     
   </entry>
   
   <entry>
     <title>test_post</title>
-    <link href="http://kkyusik.github.io/2018/12/17/test-post/"/>
-    <id>http://kkyusik.github.io/2018/12/17/test-post/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/test-post/"/>
+    <id>https://kkyusik.github.io/2018/12/17/test-post/</id>
     <published>2018-12-17T06:35:09.000Z</published>
     <updated>2018-12-17T06:35:09.673Z</updated>
     
@@ -84,8 +84,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://kkyusik.github.io/2018/12/17/hello-world/"/>
-    <id>http://kkyusik.github.io/2018/12/17/hello-world/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/hello-world/"/>
+    <id>https://kkyusik.github.io/2018/12/17/hello-world/</id>
     <published>2018-12-17T05:40:37.762Z</published>
     <updated>2018-12-17T05:40:37.762Z</updated>
     
