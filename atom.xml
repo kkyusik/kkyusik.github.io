@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T19:54:49.729Z</updated>
+  <updated>2018-12-17T19:58:03.807Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -18,18 +18,14 @@
   
   <entry>
     <title>Mapping Spatial Mismatch between Opportunity and Population</title>
-    <link href="https://kkyusik.github.io/2018/12/17/003-bilisa_map/"/>
-    <id>https://kkyusik.github.io/2018/12/17/003-bilisa_map/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/004-bilisa_map/"/>
+    <id>https://kkyusik.github.io/2018/12/17/004-bilisa_map/</id>
     <published>2018-12-17T19:54:49.499Z</published>
-    <updated>2018-12-17T19:54:49.729Z</updated>
+    <updated>2018-12-17T19:58:03.807Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Techniques used: Bivariate LISA (Local Indicators of Spatial Association)&lt;br&gt;Tools: ArcGIS 10.2, GeoDA&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-imag
-      
+      &lt;p&gt;This post shows a map that I made when I was in a graduate school.&lt;/p&gt;
     
     </summary>
     
@@ -48,8 +44,8 @@
   
   <entry>
     <title>Dasymetric Map for Estimating Spatial Distribution of Children</title>
-    <link href="https://kkyusik.github.io/2018/12/17/004-dasy_children/"/>
-    <id>https://kkyusik.github.io/2018/12/17/004-dasy_children/</id>
+    <link href="https://kkyusik.github.io/2018/12/17/003-dasy_children/"/>
+    <id>https://kkyusik.github.io/2018/12/17/003-dasy_children/</id>
     <published>2018-12-17T19:25:44.999Z</published>
     <updated>2018-12-17T19:50:55.830Z</updated>
     

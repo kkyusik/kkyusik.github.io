@@ -4,10 +4,10 @@
     
     <entry>
       <title>Mapping Spatial Mismatch between Opportunity and Population</title>
-      <link href="/2018/12/17/003-bilisa_map/"/>
-      <url>/2018/12/17/003-bilisa_map/</url>
+      <link href="/2018/12/17/004-bilisa_map/"/>
+      <url>/2018/12/17/004-bilisa_map/</url>
       
-        <content type="html"><![CDATA[<p>Techniques used: Bivariate LISA (Local Indicators of Spatial Association)<br>Tools: ArcGIS 10.2, GeoDA</p><p><img src="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png" alt="image4493"></p><p>To examine spatial mismatch between childcare opportunity and children population, bivariate LISA was used. The map was visualized by using ArcGIS and estimated by using GeoDa. </p><p>The map suggests that darker purple grids mean that they have low in opportunity and high in children population. Therefore, the darker purple grids show that they are the grids which need more childcare opportunities. </p><hr><p>Reference<br>Kyusik Kim, 2015, A Study on an Assessment of Spatial Equity about Opportunities to use Public Childcare Services: Focused on National/Public Childcare Facilities in Seoul, A Thesis of Master degree, Seoul National University. </p>]]></content>
+        <content type="html"><![CDATA[<!-- excerpt --><p>Techniques used: Bivariate LISA (Local Indicators of Spatial Association)<br>Tools: ArcGIS 10.2, GeoDA</p><p><img src="https://user-images.githubusercontent.com/28834239/50111785-976e6100-020b-11e9-804c-389d7b3bf3c0.png" alt="image4493"></p><p>To examine spatial mismatch between childcare opportunity and children population, bivariate LISA was used. The map was visualized by using ArcGIS and estimated by using GeoDa. </p><p>The map suggests that darker purple grids mean that they have low in opportunity and high in children population. Therefore, the darker purple grids show that they are the grids which need more childcare opportunities. </p><hr><p>Reference<br>Kyusik Kim, 2015, A Study on an Assessment of Spatial Equity about Opportunities to use Public Childcare Services: Focused on National/Public Childcare Facilities in Seoul, A Thesis of Master degree, Seoul National University. </p>]]></content>
       
       
       <categories>
@@ -33,8 +33,8 @@
     
     <entry>
       <title>Dasymetric Map for Estimating Spatial Distribution of Children</title>
-      <link href="/2018/12/17/004-dasy_children/"/>
-      <url>/2018/12/17/004-dasy_children/</url>
+      <link href="/2018/12/17/003-dasy_children/"/>
+      <url>/2018/12/17/003-dasy_children/</url>
       
         <content type="html"><![CDATA[<!-- excerpt --><p>Techniques used: Dasymetric mapping, GWR<br>Tools: ArcGIS 1.2, R</p><p><img src="https://user-images.githubusercontent.com/28834239/50110912-6d1ba400-0209-11e9-8560-80c756232631.png" alt="children_pop_2009"></p><p>To estimate and visualize a distribution of infants in 2009, Seoul, Korea, this dasymetric map was made by using GWR (Geographically Weighted Regression) and spatial interpolation techniques.</p><p>The results in the map I indicate that there are more infants from pale yellow to dark red in a grid of 200m x 200m. The map becomes fundamental information to calculate equity measure by comparison with the calculated index of accessibility. </p><hr><p>Reference<br>Kim, Kyusik, 2016, A Study on Spatial Equity of Opportunities to Use Public Childcare Services Focusing on National/Public Childcare Centers in Seoul, Seoul studies 17(1): 45-64.</p>]]></content>
       
