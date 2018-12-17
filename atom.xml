@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T19:39:44.477Z</updated>
+  <updated>2018-12-17T19:44:36.783Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kkyusik.github.io/2018/12/17/003-dasy_children/"/>
     <id>https://kkyusik.github.io/2018/12/17/003-dasy_children/</id>
     <published>2018-12-17T19:25:44.999Z</published>
-    <updated>2018-12-17T19:39:44.477Z</updated>
+    <updated>2018-12-17T19:44:36.783Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
       <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
   </entry>
   
