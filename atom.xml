@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-17T07:41:16.478Z</updated>
+  <updated>2018-12-17T07:46:59.244Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,86 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test_discuss2</title>
-    <link href="https://kkyusik.github.io/2018/12/17/test-discuss2/"/>
-    <id>https://kkyusik.github.io/2018/12/17/test-discuss2/</id>
-    <published>2018-12-17T07:23:09.000Z</published>
-    <updated>2018-12-17T07:41:16.478Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test_discuss</title>
-    <link href="https://kkyusik.github.io/2018/12/17/test-discuss/"/>
-    <id>https://kkyusik.github.io/2018/12/17/test-discuss/</id>
-    <published>2018-12-17T07:21:35.000Z</published>
-    <updated>2018-12-17T07:21:35.711Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>dd</title>
-    <link href="https://kkyusik.github.io/2018/12/17/dd/"/>
-    <id>https://kkyusik.github.io/2018/12/17/dd/</id>
-    <published>2018-12-17T06:35:27.000Z</published>
-    <updated>2018-12-17T06:46:52.592Z</updated>
+    <title>데이터 분석의 첫 걸음</title>
+    <link href="https://kkyusik.github.io/2018/12/17/data_analysis_life/"/>
+    <id>https://kkyusik.github.io/2018/12/17/data_analysis_life/</id>
+    <published>2018-12-17T07:46:59.108Z</published>
+    <updated>2018-12-17T07:46:59.244Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;어&lt;/p&gt;
+        &lt;h2&gt; 참고 &lt;/h2&gt;
 
+&lt;p&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
+&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 과거에 비해 많아지기도 했고, 어떤 결과를 보여주기에 효과적이기 때문인 것 같다. 나는 나
       
     
     </summary>
     
-      <category term="fff" scheme="https://kkyusik.github.io/categories/fff/"/>
-    
-    
-      <category term="Hi" scheme="https://kkyusik.github.io/tags/Hi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test_post</title>
-    <link href="https://kkyusik.github.io/2018/12/17/test-post/"/>
-    <id>https://kkyusik.github.io/2018/12/17/test-post/</id>
-    <published>2018-12-17T06:35:09.000Z</published>
-    <updated>2018-12-17T06:35:09.673Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://kkyusik.github.io/2018/12/17/hello-world/"/>
-    <id>https://kkyusik.github.io/2018/12/17/hello-world/</id>
-    <published>2018-12-17T05:40:37.762Z</published>
-    <updated>2018-12-17T05:40:37.762Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
+      <category term="cfff" scheme="https://kkyusik.github.io/categories/cfff/"/>
     
     
   </entry>
