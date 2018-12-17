@@ -3,17 +3,6 @@
   
     
     <entry>
-      <title>dd</title>
-      <link href="/2018/12/17/dd/"/>
-      <url>/2018/12/17/dd/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    <entry>
       <title>Dasymetric Map for Estimating Spatial Distribution of Children</title>
       <link href="/2018/12/17/003-dasy_children/"/>
       <url>/2018/12/17/003-dasy_children/</url>
@@ -30,9 +19,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
         </tags>
       
@@ -55,11 +44,11 @@
       
         <tags>
             
+            <tag> data analysis </tag>
+            
             <tag> python </tag>
             
             <tag> crawling </tag>
-            
-            <tag> data analysis </tag>
             
         </tags>
       
