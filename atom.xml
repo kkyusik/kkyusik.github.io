@@ -227,23 +227,22 @@
   </entry>
   
   <entry>
-    <title>Scraping web table by using pandas.read_html</title>
+    <title>Scraping Web Table by Using pandas.read_html</title>
     <link href="https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/</id>
     <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-19T05:39:11.844Z</updated>
+    <updated>2018-12-19T05:41:06.140Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When you want to scrape some website, you can use &lt;code&gt;pandas.read_html&lt;/code&gt; instead of &lt;code&gt;Beau
+        &lt;p&gt;When you want to scrape some website, you can use &lt;code&gt;pandas.read_html&lt;/code&gt; instead of &lt;code&gt;BeautifulSoup&lt;/code&gt; and &lt;code&gt;requests&lt;
       
     
     </summary>
     
-      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+      <category term="Code" scheme="https://kkyusik.github.io/categories/Code/"/>
     
     
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
@@ -251,6 +250,12 @@
       <category term="python" scheme="https://kkyusik.github.io/tags/python/"/>
     
       <category term="crawling" scheme="https://kkyusik.github.io/tags/crawling/"/>
+    
+      <category term="web scraping" scheme="https://kkyusik.github.io/tags/web-scraping/"/>
+    
+      <category term="pandas" scheme="https://kkyusik.github.io/tags/pandas/"/>
+    
+      <category term="read_html" scheme="https://kkyusik.github.io/tags/read-html/"/>
     
   </entry>
   
