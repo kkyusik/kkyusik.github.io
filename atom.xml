@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-19T03:33:57.918Z</updated>
+  <updated>2018-12-19T03:48:34.131Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,36 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>testmap</title>
-    <link href="https://kkyusik.github.io/2018/12/18/testmap/"/>
-    <id>https://kkyusik.github.io/2018/12/18/testmap/</id>
-    <published>2018-12-19T03:32:43.000Z</published>
-    <updated>2018-12-19T03:33:57.918Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;ㄹㄹ&lt;/p&gt;
-&lt;p&gt;이게 무엇인가.?&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="dd" scheme="https://kkyusik.github.io/tags/dd/"/>
-    
-      <category term="ff" scheme="https://kkyusik.github.io/tags/ff/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Calculation of Related and Unrelated Variety</title>
     <link href="https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/"/>
     <id>https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/</id>
     <published>2018-12-19T01:18:52.197Z</published>
-    <updated>2018-12-19T03:24:48.266Z</updated>
+    <updated>2018-12-19T03:48:34.131Z</updated>
     
     <summary type="html">
     
@@ -67,19 +42,48 @@
   </entry>
   
   <entry>
-    <title>Word Cloud of Chon-se in the Internet Portal News</title>
-    <link href="https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/"/>
-    <id>https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/</id>
+    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
+    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
     <published>2018-12-17T20:09:50.756Z</published>
-    <updated>2018-12-17T20:31:50.870Z</updated>
+    <updated>2018-12-19T03:43:57.847Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;This post shows a word cloud that I made when I worked at KRIHS. &lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Data sources: Naver.com&lt;br&gt;Techniques used: Web
+        &lt;p&gt;Data sources: Housing transaction data from Ministry of Land, Korea.&lt;br&gt;Tools: QGIS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubuserconten
+      
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
+    
+      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word Cloud of Chon-se in the Internet Portal News</title>
+    <link href="https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/"/>
+    <id>https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/</id>
+    <published>2018-12-17T20:09:50.756Z</published>
+    <updated>2018-12-19T03:58:28.638Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Data sources: Naver.com&lt;br&gt;Techniques used: Web crawling, Text analysis&lt;br&gt;Tools: Python, R&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubus
       
     
     </summary>
@@ -100,50 +104,18 @@
   </entry>
   
   <entry>
-    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
-    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
-    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
-    <published>2018-12-17T20:09:50.756Z</published>
-    <updated>2018-12-19T03:25:21.603Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Data sources: Housing transaction data from Ministry of
-      
-    
-    </summary>
-    
-      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
-    
-    
-      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
-    
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
-      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
-    
-      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Map for Evaluating Supply and Demand of Children Park</title>
     <link href="https://kkyusik.github.io/2018/12/17/006-childrenpark/"/>
     <id>https://kkyusik.github.io/2018/12/17/006-childrenpark/</id>
     <published>2018-12-17T20:06:45.185Z</published>
-    <updated>2018-12-17T20:08:46.776Z</updated>
+    <updated>2018-12-19T03:58:21.420Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;This post shows a map that I made when I was in graduate school, and it was attached in an article.&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Tools: ArcGIS
+        &lt;p&gt;Tools: ArcGIS 1.2, R&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/28834239/50112567-7ad32880-020d-11e9-8b85-10dc123bbbe2.pn
       
     
     </summary>
@@ -166,15 +138,13 @@
     <link href="https://kkyusik.github.io/2018/12/17/005-spatial_network/"/>
     <id>https://kkyusik.github.io/2018/12/17/005-spatial_network/</id>
     <published>2018-12-17T20:04:13.044Z</published>
-    <updated>2018-12-17T20:06:13.118Z</updated>
+    <updated>2018-12-19T03:58:15.987Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Data sources: Housing transaction data in Ministry of L
+        &lt;p&gt;Data sources: Housing transaction data in Ministry of Land, Infrastructure and Transport&lt;br&gt;Techniques used: Spatial network autocorrelat
       
     
     </summary>
@@ -199,15 +169,14 @@
     <link href="https://kkyusik.github.io/2018/12/17/004-bilisa_map/"/>
     <id>https://kkyusik.github.io/2018/12/17/004-bilisa_map/</id>
     <published>2018-12-17T19:54:49.499Z</published>
-    <updated>2018-12-17T21:00:53.500Z</updated>
+    <updated>2018-12-19T03:58:08.927Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;This post shows a map that I made when I was in a graduate school.&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Techniques used: Bivariate LISA (Local Indicat
+        &lt;p&gt;Techniques used: Bivariate LISA (Local Indicators of Spatial Association)&lt;br&gt;Tools: ArcGIS 10.2, GeoDA&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-imag
       
     
     </summary>
@@ -230,15 +199,14 @@
     <link href="https://kkyusik.github.io/2018/12/17/003-dasy_children/"/>
     <id>https://kkyusik.github.io/2018/12/17/003-dasy_children/</id>
     <published>2018-12-17T19:25:44.999Z</published>
-    <updated>2018-12-17T21:00:47.041Z</updated>
+    <updated>2018-12-19T03:58:02.784Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;This post shows a map that I made when I was in graduate school.&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;Techniques used: Dasymetric mapping, GWR&lt;br&gt;Tool
+        &lt;p&gt;Techniques used: Dasymetric mapping, GWR&lt;br&gt;Tools: ArcGIS 1.2, R&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/28834239/5011
       
     
     </summary>
@@ -261,16 +229,14 @@
     <link href="https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/</id>
     <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-17T21:18:28.779Z</updated>
+    <updated>2018-12-19T03:57:55.527Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Introduction of scraping web table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Wh
+        &lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and reque
       
     
     </summary>
@@ -291,16 +257,14 @@
     <link href="https://kkyusik.github.io/2018/12/17/000-data_analysis_life/"/>
     <id>https://kkyusik.github.io/2018/12/17/000-data_analysis_life/</id>
     <published>2018-12-17T07:46:59.108Z</published>
-    <updated>2018-12-17T18:52:36.679Z</updated>
+    <updated>2018-12-19T03:57:48.709Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;데이터 분석과 관련된 짧은 생각&lt;/p&gt;
-&lt;!-- excerpt --&gt;
-&lt;p&gt;&lt;strong&gt;참고&lt;/strong&gt;&lt;br&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
-&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 
+        &lt;p&gt;&lt;strong&gt;참고&lt;/strong&gt;&lt;br&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
+&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 과거에 비해 많아지기도 했고, 어떤 결과를 보여주기에 효과적이기 때문인 것 
       
     
     </summary>
