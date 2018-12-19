@@ -259,7 +259,7 @@
     <link href="https://kkyusik.github.io/2018/12/17/000-data_analysis_life/"/>
     <id>https://kkyusik.github.io/2018/12/17/000-data_analysis_life/</id>
     <published>2018-12-17T07:46:59.108Z</published>
-    <updated>2018-12-19T05:32:10.599Z</updated>
+    <updated>2018-12-19T05:32:50.620Z</updated>
     
     <summary type="html">
     
@@ -273,7 +273,13 @@
       <category term="Thoughts" scheme="https://kkyusik.github.io/categories/Thoughts/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="python" scheme="https://kkyusik.github.io/tags/python/"/>
+    
+      <category term="데이터 분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="r" scheme="https://kkyusik.github.io/tags/r/"/>
     
   </entry>
   
