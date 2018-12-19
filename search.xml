@@ -7,7 +7,7 @@
       <link href="/2018/12/18/test/"/>
       <url>/2018/12/18/test/</url>
       
-        <content type="html"><![CDATA[<script type="math/tex; mode=display">A_i = \frac{d}{f}</script>]]></content>
+        <content type="html"><![CDATA[<script type="math/tex; mode=display">A_i = \frac{d}{f}</script><p>\[</p><p>A_i = \alpha + b</p><p>\]</p><p>This is equatioadf!!!!</p>]]></content>
       
       
       
