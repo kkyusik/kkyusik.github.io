@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Everything is fine">
 <meta property="og:description" content="When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests. Import pandas 1import pandas as pd By using read.html you can scrape what you want. In this ca">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-19T05:41:06.140Z">
+<meta property="og:updated_time" content="2018-12-19T05:43:01.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scraping Web Table by Using pandas.read_html">
 <meta name="twitter:description" content="When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and requests. Import pandas 1import pandas as pd By using read.html you can scrape what you want. In this ca">
@@ -492,7 +492,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 <p>Second data frame is</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">html_df[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<p>This data frame is what you want to clean up. Hence, you can use <code>dropna()</code> method to remove “NaN” in data frame</p>
+<p>This data frame is what you want to clean up. Hence, you can use <code>dropna()</code> method to remove <code>NaN</code> in data frame</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html_df = html_df[<span class="number">1</span>].dropna()</span><br><span class="line">html_df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <p>As you know, the header of <code>html_df</code> is <code>[0, 1, 2, 3, 4,...]</code>.</p>
 <p>By using <code>html_df.columns = html_df.iloc[0]</code>, you can replace columns name.</p>
