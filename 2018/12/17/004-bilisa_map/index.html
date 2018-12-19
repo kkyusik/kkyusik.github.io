@@ -138,24 +138,6 @@
 
   <title>Mapping Spatial Mismatch between Opportunity and Population | Everything is fine</title>
   
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '',
-      xfbml      : true,
-      version    : 'v2.10'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 
 
 
@@ -473,7 +455,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/12/17/004-bilisa_map/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count fb-comments-count" data-href="https://kkyusik.github.io/2018/12/17/004-bilisa_map/" itemprop="commentCount">0</span>
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/17/004-bilisa_map/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -610,7 +593,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="fb-comments" data-href="https://kkyusik.github.io/2018/12/17/004-bilisa_map/" data-numposts="10" data-width="100%" data-colorscheme="light">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
       </div>
     </div>
 
@@ -902,9 +886,30 @@
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://iamkyusik.disqus.com/count.js" async></script>
+  
 
   
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://kkyusik.github.io/2018/12/17/004-bilisa_map/";
+        this.page.identifier = "2018/12/17/004-bilisa_map/";
+        this.page.title = 'Mapping Spatial Mismatch between Opportunity and Population';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://iamkyusik.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
 
 
 

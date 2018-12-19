@@ -133,24 +133,6 @@
 
   <title>categories | Everything is fine</title>
   
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '',
-      xfbml      : true,
-      version    : 'v2.10'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 
 
 
@@ -437,7 +419,8 @@
 
   
     <div class="comments" id="comments">
-      <div class="fb-comments" data-href="https://kkyusik.github.io/categories/index.html" data-numposts="10" data-width="100%" data-colorscheme="light">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
       </div>
     </div>
 
@@ -729,9 +712,30 @@
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://iamkyusik.disqus.com/count.js" async></script>
+  
 
   
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://kkyusik.github.io/categories/index.html";
+        this.page.identifier = "categories/index.html";
+        this.page.title = 'categories';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://iamkyusik.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
+  
+
+
 
 
 
