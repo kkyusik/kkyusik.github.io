@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-19T03:24:48.266Z</updated>
+  <updated>2018-12-19T03:33:57.918Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testmap</title>
+    <link href="https://kkyusik.github.io/2018/12/18/testmap/"/>
+    <id>https://kkyusik.github.io/2018/12/18/testmap/</id>
+    <published>2018-12-19T03:32:43.000Z</published>
+    <updated>2018-12-19T03:33:57.918Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ㄹㄹ&lt;/p&gt;
+&lt;p&gt;이게 무엇인가.?&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="dd" scheme="https://kkyusik.github.io/tags/dd/"/>
+    
+      <category term="ff" scheme="https://kkyusik.github.io/tags/ff/"/>
+    
+  </entry>
   
   <entry>
     <title>Calculation of Related and Unrelated Variety</title>
@@ -62,13 +87,13 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+      <category term="crawling" scheme="https://kkyusik.github.io/tags/crawling/"/>
     
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
     
-      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
-      <category term="crawling" scheme="https://kkyusik.github.io/tags/crawling/"/>
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
       <category term="word cloud" scheme="https://kkyusik.github.io/tags/word-cloud/"/>
     
@@ -95,9 +120,9 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
@@ -126,9 +151,9 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
@@ -157,9 +182,9 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
@@ -190,9 +215,9 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
@@ -221,9 +246,9 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
       <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
     
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
@@ -253,11 +278,11 @@
       <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
     
     
-      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
-    
       <category term="python" scheme="https://kkyusik.github.io/tags/python/"/>
     
       <category term="crawling" scheme="https://kkyusik.github.io/tags/crawling/"/>
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
     
   </entry>
   

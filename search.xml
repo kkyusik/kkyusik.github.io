@@ -3,6 +3,25 @@
   
     
     <entry>
+      <title>testmap</title>
+      <link href="/2018/12/18/testmap/"/>
+      <url>/2018/12/18/testmap/</url>
+      
+        <content type="html"><![CDATA[<p>ㄹㄹ</p><p>이게 무엇인가.?</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> dd </tag>
+            
+            <tag> ff </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Calculation of Related and Unrelated Variety</title>
       <link href="/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/"/>
       <url>/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/</url>
@@ -44,13 +63,13 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
+            <tag> crawling </tag>
             
             <tag> data analysis </tag>
             
-            <tag> portfolio </tag>
+            <tag> 데이터분석 </tag>
             
-            <tag> crawling </tag>
+            <tag> portfolio </tag>
             
             <tag> word cloud </tag>
             
@@ -75,9 +94,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -104,9 +123,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -133,9 +152,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -164,9 +183,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -193,9 +212,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -222,11 +241,11 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> python </tag>
             
             <tag> crawling </tag>
+            
+            <tag> data analysis </tag>
             
         </tags>
       
