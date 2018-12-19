@@ -12,7 +12,7 @@
       
       <categories>
           
-          <category> Data Analysis </category>
+          <category> Code </category>
           
       </categories>
       
@@ -23,34 +23,7 @@
             
             <tag> index </tag>
             
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
-      <link href="/2018/12/17/008-transactiomap/"/>
-      <url>/2018/12/17/008-transactiomap/</url>
-      
-        <content type="html"><![CDATA[<p>Data sources: Housing transaction data from Ministry of Land, Korea.<br>Tools: QGIS</p><p><img src="https://user-images.githubusercontent.com/28834239/50112812-3431fe00-020e-11e9-83d4-0c7f154aacac.png" alt="flow"></p><p>The bubble map is to represent the relationship of Chon-se transaction (Chon-se means a unique type of housing transaction in Korea) in Seoul Metropolitan Area. </p><p>The map indicates that exodus from Seoul to outer regions is strong. We can intuitively know the tendency by bubbles that red color means more net-outflow and green one expresses more net-inflow. </p><p>This data and visualization method represent reversed Chon-se transaction which indicates the situation that home-owner could not easily find traders of Chon-se in Seoul.</p><hr><ul><li>In Goverment Report.</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Data Analysis </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> data analysis </tag>
-            
-            <tag> 데이터분석 </tag>
-            
-            <tag> portfolio </tag>
-            
-            <tag> mapping </tag>
+            <tag> R </tag>
             
         </tags>
       
@@ -73,15 +46,44 @@
       
         <tags>
             
-            <tag> crawling </tag>
+            <tag> 데이터분석 </tag>
             
             <tag> data analysis </tag>
             
+            <tag> portfolio </tag>
+            
+            <tag> crawling </tag>
+            
+            <tag> word cloud </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+      <link href="/2018/12/17/008-transactiomap/"/>
+      <url>/2018/12/17/008-transactiomap/</url>
+      
+        <content type="html"><![CDATA[<p>Data sources: Housing transaction data from Ministry of Land, Korea.<br>Tools: QGIS</p><p><img src="https://user-images.githubusercontent.com/28834239/50112812-3431fe00-020e-11e9-83d4-0c7f154aacac.png" alt="flow"></p><p>The bubble map is to represent the relationship of Chon-se transaction (Chon-se means a unique type of housing transaction in Korea) in Seoul Metropolitan Area. </p><p>The map indicates that exodus from Seoul to outer regions is strong. We can intuitively know the tendency by bubbles that red color means more net-outflow and green one expresses more net-inflow. </p><p>This data and visualization method represent reversed Chon-se transaction which indicates the situation that home-owner could not easily find traders of Chon-se in Seoul.</p><hr><ul><li>In Goverment Report.</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> portfolio </tag>
             
-            <tag> word cloud </tag>
+            <tag> mapping </tag>
             
         </tags>
       
@@ -104,9 +106,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> portfolio </tag>
             
@@ -133,9 +135,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> portfolio </tag>
             
@@ -164,9 +166,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> portfolio </tag>
             
@@ -193,9 +195,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> 데이터분석 </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> portfolio </tag>
             
@@ -222,11 +224,11 @@
       
         <tags>
             
+            <tag> data analysis </tag>
+            
             <tag> python </tag>
             
             <tag> crawling </tag>
-            
-            <tag> data analysis </tag>
             
         </tags>
       
