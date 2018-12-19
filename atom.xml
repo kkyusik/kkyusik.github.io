@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Everything is fine</title>
   
-  <subtitle>Learn &amp; Think</subtitle>
+  <subtitle>Learning &amp; Thinking</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
