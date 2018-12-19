@@ -30,37 +30,6 @@
     </entry>
     
     <entry>
-      <title>Word Cloud of Chon-se in the Internet Portal News</title>
-      <link href="/2018/12/17/007-wordcloud_rent/"/>
-      <url>/2018/12/17/007-wordcloud_rent/</url>
-      
-        <content type="html"><![CDATA[<p>Data sources: Naver.com<br>Techniques used: Web crawling, Text analysis<br>Tools: Python, R</p><p><img src="https://user-images.githubusercontent.com/28834239/50112675-d7364800-020d-11e9-8a89-eb2d843aa217.png" alt="default"></p><p>This is a Word Cloud that represents a frequency of a word in a group of documents. The documents I used is a result of web crawling of Internet news in Naver, which is the biggest portal website in Korea.</p><p>To implement this procedure, the words are collected by Python in Internet website. In sequence, the words collected are grouped by using R.</p><p>Word Cloud means the frequency of word which represents from small to big. Therefore, you can perceive the importance of the word in documents in which you are interested. In this case, it shows that people are interested in rental prices.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Data Analysis </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 데이터분석 </tag>
-            
-            <tag> data analysis </tag>
-            
-            <tag> portfolio </tag>
-            
-            <tag> crawling </tag>
-            
-            <tag> word cloud </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
       <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
       <link href="/2018/12/17/008-transactiomap/"/>
       <url>/2018/12/17/008-transactiomap/</url>
@@ -77,13 +46,44 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
             <tag> mapping </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Word Cloud of Chon-se in the Internet Portal News</title>
+      <link href="/2018/12/17/007-wordcloud_rent/"/>
+      <url>/2018/12/17/007-wordcloud_rent/</url>
+      
+        <content type="html"><![CDATA[<p>Data sources: Naver.com<br>Techniques used: Web crawling, Text analysis<br>Tools: Python, R</p><p><img src="https://user-images.githubusercontent.com/28834239/50112675-d7364800-020d-11e9-8a89-eb2d843aa217.png" alt="default"></p><p>This is a Word Cloud that represents a frequency of a word in a group of documents. The documents I used is a result of web crawling of Internet news in Naver, which is the biggest portal website in Korea.</p><p>To implement this procedure, the words are collected by Python in Internet website. In sequence, the words collected are grouped by using R.</p><p>Word Cloud means the frequency of word which represents from small to big. Therefore, you can perceive the importance of the word in documents in which you are interested. In this case, it shows that people are interested in rental prices.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> crawling </tag>
+            
+            <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> word cloud </tag>
             
         </tags>
       
@@ -106,9 +106,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -135,9 +135,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -166,9 +166,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -195,9 +195,9 @@
       
         <tags>
             
-            <tag> 데이터분석 </tag>
-            
             <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
             
             <tag> portfolio </tag>
             
@@ -224,11 +224,11 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> python </tag>
             
             <tag> crawling </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> web scraping </tag>
             
@@ -257,9 +257,9 @@
       
         <tags>
             
-            <tag> data analysis </tag>
-            
             <tag> python </tag>
+            
+            <tag> data analysis </tag>
             
             <tag> 데이터 분석 </tag>
             
