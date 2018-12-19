@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-19T02:01:09.297Z</updated>
+  <updated>2018-12-19T02:28:07.293Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,35 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://kkyusik.github.io/2018/12/18/test/"/>
-    <id>https://kkyusik.github.io/2018/12/18/test/</id>
-    <published>2018-12-19T01:21:58.000Z</published>
-    <updated>2018-12-19T02:01:09.297Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script type=&quot;math/tex; mode=display&quot;&gt;
-A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
-&lt;p&gt;A_i = \alpha + b&lt;/p&gt;
-&lt;p&gt;\]&lt;/p&gt;
-&lt;p&gt;This is equatioadf!!!!&lt;/p&gt;
-&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Calculation of Related and Unrelated Variety</title>
     <link href="https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/"/>
     <id>https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/</id>
     <published>2018-12-19T01:18:52.197Z</published>
-    <updated>2018-12-19T02:13:27.664Z</updated>
+    <updated>2018-12-19T02:28:07.293Z</updated>
     
     <summary type="html">
     
@@ -74,7 +50,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a word cloud that I made when I worked at KRIHS. &lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a word cloud that I made when I worked at KRIHS. &lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Data sources: Naver.com&lt;br&gt;Techniques used: Web
+      
     
     </summary>
     
@@ -102,7 +83,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Data sources: Housing transaction data from Ministry of
+      
     
     </summary>
     
@@ -128,7 +114,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a map that I made when I was in graduate school, and it was attached in an article.&lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a map that I made when I was in graduate school, and it was attached in an article.&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Tools: ArcGIS
+      
     
     </summary>
     
@@ -154,7 +145,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Data sources: Housing transaction data in Ministry of L
+      
     
     </summary>
     
@@ -182,7 +178,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a map that I made when I was in a graduate school.&lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a map that I made when I was in a graduate school.&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Techniques used: Bivariate LISA (Local Indicat
+      
     
     </summary>
     
@@ -208,7 +209,12 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;This post shows a map that I made when I was in graduate school.&lt;/p&gt;
+      
+      
+        &lt;p&gt;This post shows a map that I made when I was in graduate school.&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;Techniques used: Dasymetric mapping, GWR&lt;br&gt;Tool
+      
     
     </summary>
     
@@ -234,7 +240,13 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;Introduction of scraping web table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
+      
+      
+        &lt;p&gt;Introduction of scraping web table using &lt;strong&gt;pandas.read_html&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wh
+      
     
     </summary>
     
@@ -258,7 +270,13 @@ A_i = \frac{d}{f}&lt;/script&gt;&lt;p&gt;\[&lt;/p&gt;
     
     <summary type="html">
     
-      &lt;p&gt;데이터 분석과 관련된 짧은 생각&lt;/p&gt;
+      
+      
+        &lt;p&gt;데이터 분석과 관련된 짧은 생각&lt;/p&gt;
+&lt;!-- excerpt --&gt;
+&lt;p&gt;&lt;strong&gt;참고&lt;/strong&gt;&lt;br&gt;이 글은 2017년 4월 8일에 쓰여졌습니다.&lt;/p&gt;
+&lt;p&gt;데이터를 분석하고자 하는 사람들이 많아졌다. 이용할 수 있는 데이터가 
+      
     
     </summary>
     
