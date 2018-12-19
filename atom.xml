@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-19T01:18:30.761Z</updated>
+  <updated>2018-12-19T01:22:30.527Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test</title>
+    <link href="https://kkyusik.github.io/2018/12/18/test/"/>
+    <id>https://kkyusik.github.io/2018/12/18/test/</id>
+    <published>2018-12-19T01:21:58.000Z</published>
+    <updated>2018-12-19T01:22:30.527Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;$$&lt;br&gt;A_i = \frac{d}{f}&lt;br&gt;$$&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Calculation of Related and Unrelated Variety</title>
     <link href="https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/"/>
     <id>https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/</id>
     <published>2018-12-19T01:18:52.197Z</published>
-    <updated>2018-12-19T01:18:30.761Z</updated>
+    <updated>2018-12-19T01:21:22.036Z</updated>
     
     <summary type="html">
     
@@ -38,6 +58,32 @@
       <category term="Industrial variety" scheme="https://kkyusik.github.io/tags/Industrial-variety/"/>
     
       <category term="index" scheme="https://kkyusik.github.io/tags/index/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
+    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
+    <published>2018-12-17T20:09:50.756Z</published>
+    <updated>2018-12-17T20:16:14.759Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
+    
+      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
     
   </entry>
   
@@ -66,32 +112,6 @@
       <category term="crawling" scheme="https://kkyusik.github.io/tags/crawling/"/>
     
       <category term="word cloud" scheme="https://kkyusik.github.io/tags/word-cloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
-    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
-    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
-    <published>2018-12-17T20:09:50.756Z</published>
-    <updated>2018-12-17T20:16:14.759Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This post shows a map that I made when I worked at KRIHS.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
-    
-    
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
-      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
-    
-      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
-    
-      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
     
   </entry>
   
