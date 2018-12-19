@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Everything is fine">
+    <title>Calculation of Related and Unrelated Variety - Everything is fine</title>
+    <meta name="author" content="kkyusik">
+    
+        <meta name="keywords" content="geography,transportation,spatial analysis,">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"kkyusik","sameAs":["https://github.com/kkyusik"],"image":"g45.png"},"articleBody":"Industrial varietyRelated variety of regional industry can be Jacobs externalities, which means knowledge spillovers between related corporations or industries. In contrast, the unrelated variety that means the extent of dissimilarity within industries in a given region, which addresses the effects of a portfolio, in fact, the higher unrelated variety means the stronger from external economic shocks. \nEach variety is calculated from the entropy index. The advantage of using entropy index is that the index cannot cause multicollinearity in linear regression model [@frenken_2007]. To calculate related and unrelated variety I refer to the research of @frenken_2007, and the index can be calculated as follow:\n$$P_g = \\sum_{i \\in S}P_i$$\n$P_g$ is calculated by summation of shares of 5-digit sectors within 2-digit sectors $S_g$. Based on $P_g$, unrelated variety is derived in 2-digit levels. \n$$UV = \\sum_{g=1}^{G}P_g \\log \\left(\\frac{1}{P_g}\\right)$$\nWithin each 2-digit level, related variety is weighted sum of entropy. \n$$RV = \\sum_{g=1}^{G}P_g H_g$$\nAnd $H_g$ is as follow,$$H_g = \\sum_{i \\in S_g}\\frac{p_i}{P_g} \\log_2 \\left(\\frac{1}{p_i/P_g}\\right)$$\nR code123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566library(tidyverse)# Import data for employeetable_name &lt;- \"\"    # In this case, I am using Korean business survey having information about Korean industryraw_data &lt;- read.table(table_name,                        sep = '\\t',                        header = FALSE,                       colClasses = \"character\")# Import sigunge codesgg_code &lt;- read.csv(\"sggcode.csv\",                      colClasses = \"character\")data &lt;- left_join(x = data, y = sgg_code, by = \"sgg2008\") %&gt;%        mutate(digit_5 = paste0(V3, V4, V5, V6, V7)) %&gt;%                        mutate(employee = as.numeric(V30)) %&gt;%        select(sgg2015, digit_5, employee) %&gt;%        group_by(sgg2015, digit_5) %&gt;%                                          summarise(employee = sum(employee))# Calculate Unrelated VarietyUV &lt;- dataUV &lt;- UV %&gt;%        mutate(digit_2 = substr(digit_5, 1, 3))sum_emp &lt;- UV %&gt;%        group_by(sgg2015) %&gt;%        summarise(sum_employee = sum(employee))UV &lt;- left_join(x = UV, y = sum_emp, by = \"sgg2015\") %&gt;%    mutate(pi = employee/sum_employee)pg &lt;- UV %&gt;%        group_by(sgg2015, digit_2) %&gt;%        summarise(pg_sum = sum(pi)) %&gt;%                                         mutate(log_pg = log2(1/pg_sum)) %&gt;%                                     mutate(UV2008 = pg_sum * log_pg)          UV &lt;- pg %&gt;%        group_by(sgg0215) %&gt;%        summarise(UV2008 = sum(UV2008))# Calculate Related VarietyRV &lt;- dataRV &lt;- RV %&gt;%                                                                   mutate(digit_2 = substr(digit_5, 1, 3))sum_emp &lt;- RV %&gt;%                                                              group_by(sgg2015) %&gt;%        summarise(sum_employee = sum(employee))RV &lt;- left_join(x = RV, y = sum_emp, by = 'sgg2015') %&gt;%                        mutate(pi = employee/sum_employee)pg &lt;- RV %&gt;%                                                                  group_by(sgg2015, digit_2) %&gt;%        summarise(pg_sum = sum(pi))RV &lt;- left_join(x = RV, y = pg, by = c('sgg2015', 'digit_2'))# Calculate HgRV &lt;- RV %&gt;%                            mutate(hg = (pi/pg_sum) * (log2(1/(pi/pg_sum)))) %&gt;%                    group_by(sgg2015, digit_2) %&gt;%        summarise(hg_sum = sum(hg),                   pg = sum(pi)) %&gt;%         mutate(RV2008 = pg * hg_sum) %&gt;%                                        group_by(sgg2015) %&gt;%                                                   summarise(RV2008 = sum(RV2008))total &lt;- left_join(x = UV, y = RV, by = 'sgg2015')# Exportwrite.csv(total, \"export_file_name.csv\")\nReferences","dateCreated":"2018-12-18T20:18:52-05:00","dateModified":"2018-12-18T20:18:30-05:00","datePublished":"2018-12-18T20:18:52-05:00","description":"","headline":"Calculation of Related and Unrelated Variety","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/"},"publisher":{"@type":"Organization","name":"kkyusik","sameAs":["https://github.com/kkyusik"],"image":"g45.png","logo":{"@type":"ImageObject","url":"g45.png"}},"url":"https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/","keywords":"Industrial variety, index"}</script>
+    <meta name="description" content="Industrial varietyRelated variety of regional industry can be Jacobs externalities, which means knowledge spillovers between related corporations or industries. In contrast, the unrelated variety that">
+<meta name="keywords" content="Industrial variety,index">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Calculation of Related and Unrelated Variety">
+<meta property="og:url" content="https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/index.html">
+<meta property="og:site_name" content="Everything is fine">
+<meta property="og:description" content="Industrial varietyRelated variety of regional industry can be Jacobs externalities, which means knowledge spillovers between related corporations or industries. In contrast, the unrelated variety that">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-19T01:18:30.761Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Calculation of Related and Unrelated Variety">
+<meta name="twitter:description" content="Industrial varietyRelated variety of regional industry can be Jacobs externalities, which means knowledge spillovers between related corporations or industries. In contrast, the unrelated variety that">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://kkyusik.github.io/assets/images/g45.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-c4ozcsklz4kht2pebhp44xorvyverh23toayhn7i6ubrpyedak24hv1v0hyd.min.css">
+    <!--STYLES END-->
+    
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Everything is fine</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/g45.png" alt="Author&#39;s picture">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/g45.png" alt="Author&#39;s picture">
+                </a>
+                <h4 class="sidebar-profile-name">kkyusik</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>No matter how you feel today, get up, dress up, show up, and never give up. </p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ " title="Home">
+                    
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="Categories">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags" title="Tags">
+                    
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
+                    
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-projects" title="Projects">
+                    
+                        <i class="sidebar-button-icon fa fa-star" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Projects</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/kkyusik" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/atom.xml" title="RSS">
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="5"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Calculation of Related and Unrelated Variety
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2018-12-18T20:18:52-05:00">
+	
+		    Dec 18, 2018
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Data-Analysis/">Data Analysis</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h2 id="Industrial-variety"><a href="#Industrial-variety" class="headerlink" title="Industrial variety"></a>Industrial variety</h2><p>Related variety of regional industry can be Jacobs externalities, which means knowledge spillovers between related corporations or industries. In contrast, the unrelated variety that means the extent of dissimilarity within industries in a given region, which addresses the effects of a portfolio, in fact, the higher unrelated variety means the stronger from external economic shocks. </p>
+<p>Each variety is calculated from the entropy index. The advantage of using entropy index is that the index cannot cause multicollinearity in linear regression model [@frenken_2007]. To calculate related and unrelated variety I refer to the research of @frenken_2007, and the index can be calculated as follow:</p>
+<p>$$P_g = \sum_{i \in S}P_i$$</p>
+<p>$P_g$ is calculated by summation of shares of 5-digit sectors within 2-digit sectors $S_g$. Based on $P_g$, unrelated variety is derived in 2-digit levels. </p>
+<p>$$<br>UV = \sum_{g=1}^{G}P_g \log \left(\frac{1}{P_g}\right)<br>$$</p>
+<p>Within each 2-digit level, related variety is weighted sum of entropy. </p>
+<p>$$<br>RV = \sum_{g=1}^{G}P_g H_g<br>$$</p>
+<p>And $H_g$ is as follow,<br>$$<br>H_g = \sum_{i \in S_g}\frac{p_i}{P_g} \log_2 \left(\frac{1}{p_i/P_g}\right)<br>$$</p>
+<h2 id="R-code"><a href="#R-code" class="headerlink" title="R code"></a>R code</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="comment"># Import data for employee</span></span><br><span class="line">table_name &lt;- <span class="string">""</span>    <span class="comment"># In this case, I am using Korean business survey having information about Korean industry</span></span><br><span class="line">raw_data &lt;- read.table(table_name, </span><br><span class="line">                       sep = <span class="string">'\t'</span>, </span><br><span class="line">                       header = <span class="literal">FALSE</span>,</span><br><span class="line">                       colClasses = <span class="string">"character"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Import sigunge code</span></span><br><span class="line">sgg_code &lt;- read.csv(<span class="string">"sggcode.csv"</span>, </span><br><span class="line">                     colClasses = <span class="string">"character"</span>)</span><br><span class="line"></span><br><span class="line">data &lt;- left_join(x = data, y = sgg_code, by = <span class="string">"sgg2008"</span>) %&gt;%</span><br><span class="line">        mutate(digit_5 = paste0(V3, V4, V5, V6, V7)) %&gt;%                </span><br><span class="line">        mutate(employee = as.numeric(V30)) %&gt;%</span><br><span class="line">        select(sgg2015, digit_5, employee) %&gt;%</span><br><span class="line">        group_by(sgg2015, digit_5) %&gt;%                                  </span><br><span class="line">        summarise(employee = sum(employee))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate Unrelated Variety</span></span><br><span class="line">UV &lt;- data</span><br><span class="line">UV &lt;- UV %&gt;%</span><br><span class="line">        mutate(digit_2 = substr(digit_5, <span class="number">1</span>, <span class="number">3</span>))</span><br><span class="line">sum_emp &lt;- UV %&gt;%</span><br><span class="line">        group_by(sgg2015) %&gt;%</span><br><span class="line">        summarise(sum_employee = sum(employee))</span><br><span class="line">UV &lt;- left_join(x = UV, y = sum_emp, by = <span class="string">"sgg2015"</span>) %&gt;%</span><br><span class="line">    mutate(pi = employee/sum_employee)</span><br><span class="line">pg &lt;- UV %&gt;%</span><br><span class="line">        group_by(sgg2015, digit_2) %&gt;%</span><br><span class="line">        summarise(pg_sum = sum(pi)) %&gt;%                                 </span><br><span class="line">        mutate(log_pg = log2(<span class="number">1</span>/pg_sum)) %&gt;%                             </span><br><span class="line">        mutate(UV2008 = pg_sum * log_pg)          </span><br><span class="line">UV &lt;- pg %&gt;%</span><br><span class="line">        group_by(sgg0215) %&gt;%</span><br><span class="line">        summarise(UV2008 = sum(UV2008))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate Related Variety</span></span><br><span class="line">RV &lt;- data</span><br><span class="line">RV &lt;- RV %&gt;%                                                           </span><br><span class="line">        mutate(digit_2 = substr(digit_5, <span class="number">1</span>, <span class="number">3</span>))</span><br><span class="line">sum_emp &lt;- RV %&gt;%                                                      </span><br><span class="line">        group_by(sgg2015) %&gt;%</span><br><span class="line">        summarise(sum_employee = sum(employee))</span><br><span class="line">RV &lt;- left_join(x = RV, y = sum_emp, by = <span class="string">'sgg2015'</span>) %&gt;%                </span><br><span class="line">        mutate(pi = employee/sum_employee)</span><br><span class="line">pg &lt;- RV %&gt;%                                                          </span><br><span class="line">        group_by(sgg2015, digit_2) %&gt;%</span><br><span class="line">        summarise(pg_sum = sum(pi))</span><br><span class="line">RV &lt;- left_join(x = RV, y = pg, by = c(<span class="string">'sgg2015'</span>, <span class="string">'digit_2'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Calculate Hg</span></span><br><span class="line">RV &lt;- RV %&gt;%                    </span><br><span class="line">        mutate(hg = (pi/pg_sum) * (log2(<span class="number">1</span>/(pi/pg_sum)))) %&gt;%            </span><br><span class="line">        group_by(sgg2015, digit_2) %&gt;%</span><br><span class="line">        summarise(hg_sum = sum(hg), </span><br><span class="line">                  pg = sum(pi)) %&gt;% </span><br><span class="line">        mutate(RV2008 = pg * hg_sum) %&gt;%                                </span><br><span class="line">        group_by(sgg2015) %&gt;%                                           </span><br><span class="line">        summarise(RV2008 = sum(RV2008))</span><br><span class="line"></span><br><span class="line">total &lt;- left_join(x = UV, y = RV, by = <span class="string">'sgg2015'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Export</span></span><br><span class="line">write.csv(total, <span class="string">"export_file_name.csv"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2>
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Industrial-variety/">Industrial variety</a> <a class="tag tag--primary tag--small t-link" href="/tags/index/">index</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/007-wordcloud_rent/" data-tooltip="Word Cloud of Chon-se in the Internet Portal News" aria-label="NEXT: Word Cloud of Chon-se in the Internet Portal News">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 kkyusik. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/12/17/007-wordcloud_rent/" data-tooltip="Word Cloud of Chon-se in the Internet Portal News" aria-label="NEXT: Word Cloud of Chon-se in the Internet Portal News">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/">
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/">
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/">
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/g45.png" alt="Author&#39;s picture">
+        
+            <h4 id="about-card-name">kkyusik</h4>
+        
+            <div id="about-card-bio"><p>No matter how you feel today, get up, dress up, show up, and never give up. </p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>PhD Student</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br>
+                Tallahassee, FL, United States.
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/photo.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-dbd16rvloemmuxdzniplmnxxvwoz24eya9wol0b7vvmlokgqsjivmb8dnscy.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://kkyusik.github.io/2018/12/18/009-Calculatio_of_related_and_unrelated_variety/';
+                 
+                    this.page.identifier = '2018/12/18/009-Calculatio_of_related_and_unrelated_variety/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'iamkyusik';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
