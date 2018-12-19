@@ -231,14 +231,14 @@
     <link href="https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/"/>
     <id>https://kkyusik.github.io/2018/12/17/001-20170605_pandas_read.html/</id>
     <published>2018-12-17T15:38:38.000Z</published>
-    <updated>2018-12-19T03:57:55.527Z</updated>
+    <updated>2018-12-19T05:39:11.844Z</updated>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;strong&gt;5 June 2017&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;When you want to scrape some website, you can use pandas.read_html instead of BeautifulSoup and reque
+&lt;p&gt;When you want to scrape some website, you can use &lt;code&gt;pandas.read_html&lt;/code&gt; instead of &lt;code&gt;Beau
       
     
     </summary>
