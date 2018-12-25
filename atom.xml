@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2018-12-25T01:59:07.768Z</updated>
+  <updated>2018-12-25T03:20:43.064Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction of Python</title>
+    <link href="https://kkyusik.github.io/2018/12/24/010-Introduction_of_Python/"/>
+    <id>https://kkyusik.github.io/2018/12/24/010-Introduction_of_Python/</id>
+    <published>2018-12-25T03:20:53.927Z</published>
+    <updated>2018-12-25T03:20:43.064Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;파이썬을-해석할-에디터의-선택&quot;&gt;&lt;a href=&quot;#파이썬을-해석할-에디터의-선택&quot; class=&quot;headerlink&quot; title=&quot;파이썬을 해석할 에디터의 선택&quot;&gt;&lt;/a&gt;파이썬을 해석할 에디터의 선택&lt;/h2&gt;&lt;p&gt;pycharm이 가장 유명
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://kkyusik.github.io/categories/Code/"/>
+    
+    
+      <category term="python" scheme="https://kkyusik.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Calculation of Related and Unrelated Variety</title>
