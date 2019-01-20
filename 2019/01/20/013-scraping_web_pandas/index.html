@@ -104,25 +104,25 @@
 
 
 
-  <meta name="description" content="2017년에 작성해두었던 네이버 뉴스 크롤링 관련 주피터노트북을 공유한다. 네이버뉴스의 크롤링 방식은 때때로 바뀌기 때문에 사실상 해당 코드로 원하는 결과를 얻을 수 없다(2018년 초에 이미 한번 레이아웃이 바뀌면서 해당 코드를 이용하면 내가 원하지 않는 결과까지 크롤링하는 것으로 확인). 그럼에도 불구하고, 중요한 함수 또는 작업 흐름은 유사하기 때문에">
-<meta name="keywords" content="python,web crawling">
+  <meta name="description" content="2017년에 작성한 자료로 pandas.read_html 함수를 이용해 website의 table을  This is a material introducing the way using pandas.read_html to get a table from a website. This is really convenient because of using just pa">
+<meta name="keywords" content="python,web scraping,web crawling">
 <meta property="og:type" content="article">
-<meta property="og:title" content="News Crawling in Naver">
-<meta property="og:url" content="https://kkyusik.github.io/2019/01/20/012-News-Crawling-in-Naver/index.html">
+<meta property="og:title" content="Scraping Web Table using pandas.read_html">
+<meta property="og:url" content="https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/index.html">
 <meta property="og:site_name" content="Everything is fine">
-<meta property="og:description" content="2017년에 작성해두었던 네이버 뉴스 크롤링 관련 주피터노트북을 공유한다. 네이버뉴스의 크롤링 방식은 때때로 바뀌기 때문에 사실상 해당 코드로 원하는 결과를 얻을 수 없다(2018년 초에 이미 한번 레이아웃이 바뀌면서 해당 코드를 이용하면 내가 원하지 않는 결과까지 크롤링하는 것으로 확인). 그럼에도 불구하고, 중요한 함수 또는 작업 흐름은 유사하기 때문에">
+<meta property="og:description" content="2017년에 작성한 자료로 pandas.read_html 함수를 이용해 website의 table을  This is a material introducing the way using pandas.read_html to get a table from a website. This is really convenient because of using just pa">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-20T23:09:25.706Z">
+<meta property="og:updated_time" content="2019-01-20T23:17:14.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="News Crawling in Naver">
-<meta name="twitter:description" content="2017년에 작성해두었던 네이버 뉴스 크롤링 관련 주피터노트북을 공유한다. 네이버뉴스의 크롤링 방식은 때때로 바뀌기 때문에 사실상 해당 코드로 원하는 결과를 얻을 수 없다(2018년 초에 이미 한번 레이아웃이 바뀌면서 해당 코드를 이용하면 내가 원하지 않는 결과까지 크롤링하는 것으로 확인). 그럼에도 불구하고, 중요한 함수 또는 작업 흐름은 유사하기 때문에">
+<meta name="twitter:title" content="Scraping Web Table using pandas.read_html">
+<meta name="twitter:description" content="2017년에 작성한 자료로 pandas.read_html 함수를 이용해 website의 table을  This is a material introducing the way using pandas.read_html to get a table from a website. This is really convenient because of using just pa">
 
 
 
 
 
 
-  <link rel="canonical" href="https://kkyusik.github.io/2019/01/20/012-News-Crawling-in-Naver/">
+  <link rel="canonical" href="https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/">
 
 
 
@@ -132,7 +132,7 @@
   };
 </script>
 
-  <title>News Crawling in Naver | Everything is fine</title>
+  <title>Scraping Web Table using pandas.read_html | Everything is fine</title>
   
 
 
@@ -374,7 +374,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kkyusik.github.io/2019/01/20/012-News-Crawling-in-Naver/">
+    <link itemprop="mainEntityOfPage" href="https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kkyusik">
@@ -391,7 +391,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">News Crawling in Naver
+          <h1 class="post-title" itemprop="name headline">Scraping Web Table using pandas.read_html
 
               
             
@@ -417,7 +417,7 @@
                 
               
 
-              <time title="Created: 2019-01-20 18:09:25" itemprop="dateCreated datePublished" datetime="2019-01-20T18:09:25-05:00">2019-01-20</time>
+              <time title="Created: 2019-01-20 18:13:08" itemprop="dateCreated datePublished" datetime="2019-01-20T18:13:08-05:00">2019-01-20</time>
             
 
             
@@ -450,9 +450,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/20/012-News-Crawling-in-Naver/#comments" itemprop="discussionUrl">
+                <a href="/2019/01/20/013-scraping_web_pandas/#comments" itemprop="discussionUrl">
                 
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/20/012-News-Crawling-in-Naver/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/20/013-scraping_web_pandas/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -480,8 +480,9 @@
       
 
       
-        <p>2017년에 작성해두었던 네이버 뉴스 크롤링 관련 주피터노트북을 공유한다. 네이버뉴스의 크롤링 방식은 때때로 바뀌기 때문에 사실상 해당 코드로 원하는 결과를 얻을 수 없다(2018년 초에 이미 한번 레이아웃이 바뀌면서 해당 코드를 이용하면 내가 원하지 않는 결과까지 크롤링하는 것으로 확인). 그럼에도 불구하고, 중요한 함수 또는 작업 흐름은 유사하기 때문에 참고할 수 있을 것이라 생각한다.</p>
-<p><a href="https://nbviewer.jupyter.org/github/kkyusik/Python_study/blob/master/20170528_%EB%84%A4%EC%9D%B4%EB%B2%84%EB%89%B4%EC%8A%A4_%ED%81%AC%EB%A1%A4%EB%A7%81.ipynb" target="_blank" rel="noopener">네이버 뉴스 크롤링</a> 이곳을 참고. </p>
+        <p>2017년에 작성한 자료로 <code>pandas.read_html</code> 함수를 이용해 website의 table을 </p>
+<p>This is a material introducing the way using <code>pandas.read_html</code> to get a table from a website. This is really convenient because of using just <code>pandas</code> instead of <code>BeautifulSoup</code> or <code>requests</code>. </p>
+<p>Please refer to <strong><a href="https://nbviewer.jupyter.org/github/kkyusik/Python_study/blob/master/20170605_pandas_read.html.ipynb" target="_blank" rel="noopener">here</a></strong>.</p>
 
       
     </div>
@@ -511,6 +512,8 @@
           
             <a href="/tags/python/" rel="tag"># python</a>
           
+            <a href="/tags/web-scraping/" rel="tag"># web scraping</a>
+          
             <a href="/tags/web-crawling/" rel="tag"># web crawling</a>
           
         </div>
@@ -524,8 +527,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/011-Talk_with_Friend/" rel="next" title="그냥 생각">
-                <i class="fa fa-chevron-left"></i> 그냥 생각
+              <a href="/2019/01/20/012-News-Crawling-in-Naver/" rel="next" title="News Crawling in Naver">
+                <i class="fa fa-chevron-left"></i> News Crawling in Naver
               </a>
             
           </div>
@@ -533,10 +536,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/20/013-scraping_web_pandas/" rel="prev" title="Scraping Web Table using pandas.read_html">
-                Scraping Web Table using pandas.read_html <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -797,9 +796,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "https://kkyusik.github.io/2019/01/20/012-News-Crawling-in-Naver/";
-        this.page.identifier = "2019/01/20/012-News-Crawling-in-Naver/";
-        this.page.title = 'News Crawling in Naver';
+        this.page.url = "https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/";
+        this.page.identifier = "2019/01/20/013-scraping_web_pandas/";
+        this.page.title = 'Scraping Web Table using pandas.read_html';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
