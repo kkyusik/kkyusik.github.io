@@ -7,7 +7,7 @@
       <link href="/2019/01/20/013-scraping_web_pandas/"/>
       <url>/2019/01/20/013-scraping_web_pandas/</url>
       
-        <content type="html"><![CDATA[<p>2017년에 작성한 자료로 <code>pandas.read_html</code> 함수를 이용해 website의 table을 </p><p>This is a material introducing the way using <code>pandas.read_html</code> to get a table from a website. This is really convenient because of using just <code>pandas</code> instead of <code>BeautifulSoup</code> or <code>requests</code>. </p><p>Please refer to <strong><a href="https://nbviewer.jupyter.org/github/kkyusik/Python_study/blob/master/20170605_pandas_read.html.ipynb" target="_blank" rel="noopener">here</a></strong>.</p>]]></content>
+        <content type="html"><![CDATA[<p>This is a material introducing the way using <code>pandas.read_html</code> to get a table from a website. This is really convenient because of using just <code>pandas</code> instead of <code>BeautifulSoup</code> or <code>requests</code>. </p><p>Please refer to <strong><a href="https://nbviewer.jupyter.org/github/kkyusik/Python_study/blob/master/20170605_pandas_read.html.ipynb" target="_blank" rel="noopener">here</a></strong>.</p>]]></content>
       
       
       <categories>

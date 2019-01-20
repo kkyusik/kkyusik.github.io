@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2019-01-20T23:17:14.728Z</updated>
+  <updated>2019-01-20T23:20:37.050Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -21,14 +21,13 @@
     <link href="https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/"/>
     <id>https://kkyusik.github.io/2019/01/20/013-scraping_web_pandas/</id>
     <published>2019-01-20T23:13:08.525Z</published>
-    <updated>2019-01-20T23:17:14.728Z</updated>
+    <updated>2019-01-20T23:20:37.050Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;2017년에 작성한 자료로 &lt;code&gt;pandas.read_html&lt;/code&gt; 함수를 이용해 website의 table을 &lt;/p&gt;
-&lt;p&gt;This is a material introducing the way using &lt;code&gt;pandas.re
+        &lt;p&gt;This is a material introducing the way using &lt;code&gt;pandas.read_html&lt;/code&gt; to get a table from a website. This is really convenient becau
       
     
     </summary>
