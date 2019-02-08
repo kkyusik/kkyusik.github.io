@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kkyusik.github.io/"/>
-  <updated>2019-01-20T23:20:37.050Z</updated>
+  <updated>2019-02-08T05:20:03.509Z</updated>
   <id>https://kkyusik.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scraping Places from GoogleMaps API and Making Geometry from the Result</title>
+    <link href="https://kkyusik.github.io/2019/02/08/014-Scraping-Places-from-GoogleMaps-API-and-Making-Geometry-from-the-Result/"/>
+    <id>https://kkyusik.github.io/2019/02/08/014-Scraping-Places-from-GoogleMaps-API-and-Making-Geometry-from-the-Result/</id>
+    <published>2019-02-08T05:20:03.317Z</published>
+    <updated>2019-02-08T05:20:03.509Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;How-to-Get-Information-From-Google-Map&quot;&gt;&lt;a href=&quot;#How-to-Get-Information-From-Google-Map&quot; class=&quot;headerlink&quot; title=&quot;How to Get Infor
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://kkyusik.github.io/categories/Code/"/>
+    
+    
+      <category term="python" scheme="https://kkyusik.github.io/tags/python/"/>
+    
+      <category term="googlemaps" scheme="https://kkyusik.github.io/tags/googlemaps/"/>
+    
+      <category term="API" scheme="https://kkyusik.github.io/tags/API/"/>
+    
+      <category term="scraping" scheme="https://kkyusik.github.io/tags/scraping/"/>
+    
+  </entry>
   
   <entry>
     <title>Scraping Web Table using pandas.read_html</title>
@@ -140,6 +169,36 @@
   </entry>
   
   <entry>
+    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
+    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
+    <published>2018-12-17T20:09:50.756Z</published>
+    <updated>2018-12-19T03:43:57.847Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Data sources: Housing transaction data from Ministry of Land, Korea.&lt;br&gt;Tools: QGIS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubuserconten
+      
+    
+    </summary>
+    
+      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
+    
+    
+      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
+    
+      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
+    
+      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
+    
+      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Word Cloud of Chon-se in the Internet Portal News</title>
     <link href="https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/"/>
     <id>https://kkyusik.github.io/2018/12/17/007-wordcloud_rent/</id>
@@ -168,36 +227,6 @@
       <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
     
       <category term="word cloud" scheme="https://kkyusik.github.io/tags/word-cloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
-    <link href="https://kkyusik.github.io/2018/12/17/008-transactiomap/"/>
-    <id>https://kkyusik.github.io/2018/12/17/008-transactiomap/</id>
-    <published>2018-12-17T20:09:50.756Z</published>
-    <updated>2018-12-19T03:43:57.847Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Data sources: Housing transaction data from Ministry of Land, Korea.&lt;br&gt;Tools: QGIS&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubuserconten
-      
-    
-    </summary>
-    
-      <category term="Data Analysis" scheme="https://kkyusik.github.io/categories/Data-Analysis/"/>
-    
-    
-      <category term="data analysis" scheme="https://kkyusik.github.io/tags/data-analysis/"/>
-    
-      <category term="데이터분석" scheme="https://kkyusik.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D/"/>
-    
-      <category term="portfolio" scheme="https://kkyusik.github.io/tags/portfolio/"/>
-    
-      <category term="mapping" scheme="https://kkyusik.github.io/tags/mapping/"/>
     
   </entry>
   

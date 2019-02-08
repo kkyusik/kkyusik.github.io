@@ -3,6 +3,35 @@
   
     
     <entry>
+      <title>Scraping Places from GoogleMaps API and Making Geometry from the Result</title>
+      <link href="/2019/02/08/014-Scraping-Places-from-GoogleMaps-API-and-Making-Geometry-from-the-Result/"/>
+      <url>/2019/02/08/014-Scraping-Places-from-GoogleMaps-API-and-Making-Geometry-from-the-Result/</url>
+      
+        <content type="html"><![CDATA[<h2 id="How-to-Get-Information-From-Google-Map"><a href="#How-to-Get-Information-From-Google-Map" class="headerlink" title="How to Get Information From Google Map"></a>How to Get Information From Google Map</h2><p>This post shows the way getting information that you are searching with keywords like “restaurants in Florida.” Before starting, you have to get API key at <a href="https://developers.google.com/maps/documentation/embed/get-api-key" target="_blank" rel="noopener">Google Maps Platform</a> and you can learn the way getting API key from Youtube (<a href="https://www.youtube.com/watch?v=9ImLCQBj9SE" target="_blank" rel="noopener">How to get Google Maps Api Key in 1 minute (2019)</a>). </p><p>Following is the code for scraping information from google map.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import googlemaps</span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">api_key = &apos;Put your API key&apos;</span><br><span class="line">gm = googlemaps.Client(key = api_key)</span><br><span class="line"></span><br><span class="line">params = &#123;</span><br><span class="line">    &apos;query&apos;:&apos;Put your search term or keywords&apos;</span><br><span class="line">&#125;</span><br><span class="line">x = gm.places(**params)</span><br><span class="line"></span><br><span class="line">name = []</span><br><span class="line">address = []</span><br><span class="line">lat = []</span><br><span class="line">lng = []</span><br><span class="line"></span><br><span class="line">for i in range(len(x[&apos;results&apos;])):</span><br><span class="line">    name.append(x[&apos;results&apos;][i][&apos;name&apos;])</span><br><span class="line">    address.append(x[&apos;results&apos;][i][&apos;formatted_address&apos;])</span><br><span class="line">    lat.append(x[&apos;results&apos;][i][&apos;geometry&apos;][&apos;location&apos;][&apos;lat&apos;])</span><br><span class="line">    lng.append(x[&apos;results&apos;][i][&apos;geometry&apos;][&apos;location&apos;][&apos;lng&apos;])</span><br><span class="line"></span><br><span class="line">a = 1</span><br><span class="line">while a &lt; 9999:</span><br><span class="line">    if &apos;next_page_token&apos; in x.keys():</span><br><span class="line">        params[&apos;page_token&apos;] = x[&apos;next_page_token&apos;]</span><br><span class="line">        time.sleep(2)</span><br><span class="line">        x = gm.places(**params)</span><br><span class="line">        for i in range(len(x[&apos;results&apos;])):</span><br><span class="line">            name.append(x[&apos;results&apos;][i][&apos;name&apos;])</span><br><span class="line">            address.append(x[&apos;results&apos;][i][&apos;formatted_address&apos;])</span><br><span class="line">            lat.append(x[&apos;results&apos;][i][&apos;geometry&apos;][&apos;location&apos;][&apos;lat&apos;])</span><br><span class="line">            lng.append(x[&apos;results&apos;][i][&apos;geometry&apos;][&apos;location&apos;][&apos;lng&apos;])</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;The end&quot;)</span><br><span class="line">        b = &apos;the end&apos;</span><br><span class="line">        </span><br><span class="line">    if b == &apos;the end&apos;:</span><br><span class="line">        break</span><br><span class="line">    a = a+1</span><br><span class="line">    </span><br><span class="line">result_df = pd.DataFrame(&#123;&apos;name&apos;:name, </span><br><span class="line">                          &apos;address&apos;:address,</span><br><span class="line">                          &apos;lat&apos;:lat,</span><br><span class="line">                          &apos;lng&apos;:lng&#125;)</span><br></pre></td></tr></table></figure><p>This code basically needs three modules: <code>pandas</code>, <code>googlemaps</code>, and <code>time</code>. After import modules, we need to assign our API key to <code>api_key</code> and make <code>gm</code> variable. </p><p><code>params</code> means the parameters that are assigned to <code>gm.places</code> function. At first parameter is <code>query</code> which is search terms or keywords that you want to get information from google map. </p><p>From the results <code>x</code>, we are going to get name, address, and coordinates(lat, lng). Coordinates will be used to convert points geometry for mapping. </p><p><code>next_page_token</code> indicates next pages in the results of your search. If there is <code>next_page_token</code> in the result of <code>gm.places</code>, it means there is next page of the result. If there is no the token, it means there is no next page, which means the result is the last page. Thus, we are repeating <code>gm.places</code> until <code>next_page_token</code> disappears in a result of <code>gm.places</code>. </p><p>Last, by using <code>pd.DataFrame</code>, make a dataframe consisting of <code>name</code>, <code>address</code>, <code>lat</code>, and <code>lng</code>.</p><h2 id="How-to-Convert-lat-and-lng-to-Points"><a href="#How-to-Convert-lat-and-lng-to-Points" class="headerlink" title="How to Convert lat and lng to Points"></a>How to Convert <code>lat</code> and <code>lng</code> to Points</h2><p>From above result, we want to make geometry column. We need additional modules: <code>geopandas</code> and <code>shapely.geometry</code>. First, make <code>Point(xy)</code> from <code>lng</code> and <code>lat</code> of <code>result_df</code>, and then, assign <code>epsg:4326</code> (WGS84) to <code>crs</code>. Last, make <code>GeoDataFrame</code>. The code is below.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import geopandas as gpd</span><br><span class="line">from shapely.geometry import Point</span><br><span class="line"></span><br><span class="line">geometry = [Point(xy) for xy in zip(result_df.lng, result_df.lat)]</span><br><span class="line">crs = &#123;&apos;init&apos;:&apos;epsg:4236&apos;&#125;</span><br><span class="line">gdf = gpd.GeoDataFrame(result_df, crs=crs, geometry=geometry)</span><br><span class="line"></span><br><span class="line">gdf.to_file(r&apos;Output path you want, for instance, C:\gdf.shp&apos;)</span><br></pre></td></tr></table></figure><p>If you have any questions, please let me know. I will appreciate if you ask anything. </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> googlemaps </tag>
+            
+            <tag> API </tag>
+            
+            <tag> scraping </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Scraping Web Table using pandas.read_html</title>
       <link href="/2019/01/20/013-scraping_web_pandas/"/>
       <url>/2019/01/20/013-scraping_web_pandas/</url>
@@ -122,6 +151,35 @@
     </entry>
     
     <entry>
+      <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
+      <link href="/2018/12/17/008-transactiomap/"/>
+      <url>/2018/12/17/008-transactiomap/</url>
+      
+        <content type="html"><![CDATA[<p>Data sources: Housing transaction data from Ministry of Land, Korea.<br>Tools: QGIS</p><p><img src="https://user-images.githubusercontent.com/28834239/50112812-3431fe00-020e-11e9-83d4-0c7f154aacac.png" alt="flow"></p><p>The bubble map is to represent the relationship of Chon-se transaction (Chon-se means a unique type of housing transaction in Korea) in Seoul Metropolitan Area. </p><p>The map indicates that exodus from Seoul to outer regions is strong. We can intuitively know the tendency by bubbles that red color means more net-outflow and green one expresses more net-inflow. </p><p>This data and visualization method represent reversed Chon-se transaction which indicates the situation that home-owner could not easily find traders of Chon-se in Seoul.</p><hr><ul><li>In Goverment Report.</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> data analysis </tag>
+            
+            <tag> 데이터분석 </tag>
+            
+            <tag> portfolio </tag>
+            
+            <tag> mapping </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Word Cloud of Chon-se in the Internet Portal News</title>
       <link href="/2018/12/17/007-wordcloud_rent/"/>
       <url>/2018/12/17/007-wordcloud_rent/</url>
@@ -147,35 +205,6 @@
             <tag> portfolio </tag>
             
             <tag> word cloud </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Map for Net-flow of Housing Transactions in Seoul Metropolitan Area</title>
-      <link href="/2018/12/17/008-transactiomap/"/>
-      <url>/2018/12/17/008-transactiomap/</url>
-      
-        <content type="html"><![CDATA[<p>Data sources: Housing transaction data from Ministry of Land, Korea.<br>Tools: QGIS</p><p><img src="https://user-images.githubusercontent.com/28834239/50112812-3431fe00-020e-11e9-83d4-0c7f154aacac.png" alt="flow"></p><p>The bubble map is to represent the relationship of Chon-se transaction (Chon-se means a unique type of housing transaction in Korea) in Seoul Metropolitan Area. </p><p>The map indicates that exodus from Seoul to outer regions is strong. We can intuitively know the tendency by bubbles that red color means more net-outflow and green one expresses more net-inflow. </p><p>This data and visualization method represent reversed Chon-se transaction which indicates the situation that home-owner could not easily find traders of Chon-se in Seoul.</p><hr><ul><li>In Goverment Report.</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Data Analysis </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> data analysis </tag>
-            
-            <tag> 데이터분석 </tag>
-            
-            <tag> portfolio </tag>
-            
-            <tag> mapping </tag>
             
         </tags>
       
